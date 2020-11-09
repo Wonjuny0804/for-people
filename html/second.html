@@ -33,9 +33,9 @@
                <!-- 회원가입 패스워드 확인 -->
                <div class="member-form__pw-check">
                     <label for="userPasswordCheck">패스워드 확인</label>
-                    <input type="password" id="userPassword" name="userPassword" aria-required="true"
-                    aria-invalid="false" aria-describedby="passwordErrorFeedback">
-                    <span role="alert" id="passwordErrorFeedback">비밀번호가 일치하지 않습니다. 등록한 사용자 계정 비밀번호와 동일해야 합니다.</span>
+                    <input type="password" id="userPasswordCheck" name="userPassword" aria-required="true"
+                    aria-invalid="false" aria-describedby="passwordCheckErrorFeedback">
+                    <span role="alert" id="passwordCheckErrorFeedback">비밀번호가 일치하지 않습니다. 등록한 사용자 계정 비밀번호와 동일해야 합니다.</span>
                </div>
                <!-- 회원가입 이름 -->
                <div class="member-form__name">
@@ -54,8 +54,11 @@
                </div>
                <!-- 회원가입 생년월일 -->
                <div class="member-form__birthday">
-                    <label for="year">생년월일</label>
-                    <select name="userYearOfBirth" id="year" aria-label="출생년도">
+                    
+                    <fieldset>
+                        <legend>생년월일</legend>
+                        <label for="year">년도</label>
+                        <select name="userYearOfBirth" id="year" aria-label="출생년도">
                         <option value="">년도</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
@@ -148,9 +151,9 @@
                         <option value="1932">1932</option>
                         <option value="1931">1931</option>
                         <option value="1930">1930</option>
-                    </select>
-                    <label for="month">월</label>
-                    <select name="userMonthOfBirth" id="month" aria-label="출생월">
+                        </select>
+                        <label for="month">월</label>
+                        <select name="userMonthOfBirth" id="month" aria-label="출생월">
                         <option value="">월</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -164,9 +167,9 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
-                    </select>
-                    <label for="date">일</label>
-                    <select name="userDateOfBirth" id="date" aria-label="출생일">
+                        </select>
+                        <label for="date">일</label>
+                        <select name="userDateOfBirth" id="date" aria-label="출생일">
                         <option value="">일</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -199,18 +202,19 @@
                         <option value="29">29</option>
                         <option value="30">30</option>
                         <option value="31">31</option>
-                    </select>
-                    <label for="metonicCyle">양음력</label>
-                    <select name="userMetonicCyle" id="metonicCyle" aria-label="양음력">
+                        </select>
+                        <label for="metonicCyle">양음력</label>
+                        <select name="userMetonicCyle" id="metonicCyle" aria-label="양음력">
                         <option value="양력">양력</option>
                         <option value="음력">음력</option>
-                    </select>
+                        </select>
+                    </fieldset>
                     <p class="member-form__addword"> 회원 가입 완료 후, Cafe W 카드를 등록하시면 무료음료 쿠폰이 발행됩니다.</p>
                </div>
                <!-- 회원가입 전화번호 -->
                <div class="member-form__phone">
                     <label for="userPhoneNumber">전화번호</label>
-                    <input type="phone" name="userPhoneNumber" id="userPhoneNumber" aria-required="true" aria-invalid="false" aria-describedby="phoneErrorFeedback">
+                    <input type="tel" name="userPhoneNumber" id="userPhoneNumber" aria-required="true" aria-invalid="false" aria-describedby="phoneErrorFeedback">
                     <span role="alert" id="phoneErrorFeedback">전화번호는 하이픈을 제외한 숫자만 입력하세요.</span>
                 </div>
                <div class="member-form__auth">
@@ -241,11 +245,17 @@
                <!-- 선택적 개인정보 수집동의 및 이용약관 -->
                <div class="member-form__privacy-policy">
                    <label for="policyAgree">선택적 개인정보 수집동의 및 이용약관</label>
-                   <p class="policy-body"></p>
-                   <input type="checkbox">
+                   <p class="policy-body">본인은 Cafe W(이하 “회사”라 합니다)가 제공하는 콜 마이 네임 서비스 (이하 “서비스”라 합니다)를 이용하기 위해, 다음과 같이 “회사”가 본인의 개인정보를 수집·이용하는 것에 동의합니다. 
+                       ※ 귀하께서는 개인정보 수집·이용에 대한 동의를 거부하실 수 있으나, 동의를 거부하실 경우 서비스 이용을 하실 수 없습니다.
+                        1. 개인정보 항목·목적·보유기간 2. 관계법령에 의한 개인정보 보존기간 - 서비스이용기록, 접속로그, 접속IP정보 (통신비밀보호법 : 3개월)
+                        - 표시/광고에 관한 기록 (전자상거래법 : 6개월) - 계약 또는 청약철회 등에 관한 기록 (전자상거래법 : 5년) - 대금결제 및 재화 등의 공급에 관한 기록 (전자상거래법 : 5년)
+                        - 소비자의 불만 또는 분쟁처리에 관한 기록 (전자상거래법 : 3년) 3. 서비스 이용과정 및 사업 처리과정에서 수집될 수 있는 개인정보의 범위 서비스 이용기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록 * 쿠키의 경우
+                        구체적인 운영 내역과 설정 거부 방법 등은 본 홈페이지 개인정보처리방침 “개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항”에서 확인하실 수 있습니다.</p>
+                   <input type="checkbox" id="policyAgree" name="policyAgree">
                </div>
+               <p class="member-form__instruction">선택항목은 입력하지 않거나 동의하지 않아도 회원 가입이 가능합니다.</p>
                <!-- 회원가입 폼 제출 버튼-->
-               <button type="submit" class="signup-button button-fill" diabled></button>
+               <button type="submit" class="signup-button button-fill" disabled></button>
            </fieldset>
        </form>
    </section>
