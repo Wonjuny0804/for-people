@@ -1,0 +1,70 @@
+
+/* jwkim 코드 ================== */
+/* reset 코드 */
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+ul, ol{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 1;
+}
+a{
+  text-decoration: none;
+}
+
+button{
+  border: 0;
+  padding: 0;
+}
+
+input{
+  padding: 0;
+  border: 0;
+}
+
+/* 조립 코드 */
+.a11y-hidden, legend{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+}
+
+
+.flex-default{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+/* hjpark 코드 ===============================*/
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .a11y-hidden, legend {
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.reset-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
