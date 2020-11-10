@@ -77,13 +77,14 @@
 .member-form__name, 
 .member-form__gender {
     display: inline-block;
-    width: 48%;
+    
 }
 .member-form__name {
     width: 52%
 }
 .member-form__gender {
     float: right;
+    width: 45%;
 }
 .member-form__gender legend {
     display: block;
@@ -100,7 +101,7 @@
     display: flex;
 }
 .gender-options label {
-    width: 15%;
+    width: 20%;
     line-height: 30px;
     font-size: 1.3em;
 }
