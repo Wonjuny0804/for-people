@@ -213,6 +213,24 @@
 /* 닉네임 */
 .member-form__nickname {
 }
+/*선택적 개인정보 수집동의 및 이용약관*/
+.member-form__privacy-policy {
+    width: 100%;
+    position:relative;
+}
+.member-form__privacy-policy .policy-body {
+    border: 1px solid var(--theme-light3);
+    height: 100px;
+    overflow: auto;
+    font-size: 1.2em;
+    background-color: var(--theme-light3);
+}
+
+.member-form__privacy-policy .scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.member-form__privacy-policy input {
+}
 /* 데스크탑 화면 */
 /* @media all and (min-width:767px) {
 
