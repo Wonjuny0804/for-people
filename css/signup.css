@@ -28,12 +28,10 @@
 }
 /* 필드셋 안에 있는 요소들 레이아웃*/
 .member-form fieldset {
-    border: none;
     padding: 2vw;
 }
 /* 회원 가입 폼 clip처리*/
 .member-form legend { 
- 
 }
 /* input공통 영역 제어 코드 */
  .member-form label {
@@ -76,6 +74,31 @@
 .member-form__name, 
 .member-form__gender {
     display: inline-block;
+    width: 48%;
+}
+.member-form__name {
+}
+.member-form__gender {
+    float: right;
+}
+.member-form__gender legend {
+    display: block;
+}
+.member-form__gender--label {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    margin-top: 2px;
+    margin-bottom: 10px;
+
+}
+.gender-options {
+    display: flex;
+}
+.gender-options label {
+    width: 50%;
+}
+.member-form__gender input{
 }
 .member-form span[role="alert"] {
     display: none;

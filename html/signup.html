@@ -16,7 +16,7 @@
        <!-- 회원가입 폼 -->
        <form action="#" class="member-form" method="POST">
            <fieldset>
-               <legend>회원가입 폼</legend>
+               <legend class="a11y-hidden">회원가입 폼</legend>
                <!-- 회원가입 아이디-->
                <div class="member-form__id">
                     <label for="userEmail">아이디</label>
@@ -49,12 +49,15 @@
                <!-- 회원가입 성별 -->
                <!--radiogroup-->
                <div class="member-form__gender">
-                    <p class="member-form__gender__label">성별</p>
-                    <label for="male">남성</label>
-                    <input type="radio" id="male" name="gender" value="male"/>
-                    <label for="female">여성</label>
-                    <input type="radio" id="female" name="gender" value="female"/>
-               </div>
+    
+                    <p class="member-form__gender--label">성별</p>
+                    <div class="gender-options">
+                      <label for="female">여성</label>
+                      <input type="radio" id="female" name="gender" value="female"/>
+                      <label for="male">남성</label>
+                      <input type="radio" id="male" name="gender" value="male">
+                    </div>
+              </div>
                <!-- 회원가입 생년월일 -->
                <div class="member-form__birthday">
                     

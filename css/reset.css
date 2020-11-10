@@ -26,7 +26,7 @@ input{
 }
 
 /* 조립 코드 */
-.a11y-hidden, legend{
+.a11y-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -50,7 +50,7 @@ fieldset {
     margin: 0;
     padding: 0;
   }
-  .a11y-hidden, legend {
+  .a11y-hidden {
     overflow: hidden;
     position: absolute !important;
     clip: rect(0, 0, 0, 0);
