@@ -1,10 +1,8 @@
-@import url('./variables.css');
-/* body 초기화*/
-.body {
-    margin: 0;
-    padding: 0;
-}
+@import url('./style.css');
 /* 전체 레이아웃 설정*/
+.body {
+    min-width: 760px;
+}
 .member {
     text-align:center;
     display: block;
@@ -13,45 +11,49 @@
     color : var(--theme-main);
     border: 1px solid var(--theme-light);
 }
-.member__headline {
+/* 헤드라인과 인트로 글귀 디자인*/
+ .member__headline {
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 2em;
 }
 .member__intro {
     text-transform: uppercase;
-    border-bottom: 2px solid var(--theme-light);
-    font-size: .8em;
-    margin-top: 0;
-    padding-bottom: 35px;
+    border-bottom: 1px solid var(--theme-light);
+    font-size: 1em;
+    font-weight: 540;
+    margin-top: 5px;
+    padding-bottom: 30px;
 }
+/* 필드셋 안에 있는 요소들 레이아웃*/
 .member-form fieldset {
     border: none;
-    margin: 0;
-    padding: 0;
+    padding: 2vw;
 }
-.member-form legend {
-    overflow: hidden;
-    position: absolute !important;
-    clip: rect(0, 0, 0, 0);
-    clip-path: polygon(0 0, 0 0, 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+/* 회원 가입 폼 clip처리*/
+.member-form legend { 
+ 
 }
 /* input공통 영역 제어 코드 */
-.member-form label {
+ .member-form label {
+    background-color: yellow;
     display: block;
     width: 100%;
     text-align:left;
     font-weight: 1000;
+    font-size: 1.3em;
+    height: 25px
 }
+/* 필수 입력요소 가상요소 선택자*/
 .member-form label::after{
+    background-color: blue;
     background: no-repeat url('../css/images/sign-up-sprite.png') 0 0/ 50% 50%;
     width: 100px;
     height: 100px;
     position: absolute;
     right: 0;
-}
+} 
 /* input에 대한 공통 속성 주기 */
 .member-form input {
     width: 100%;
@@ -61,7 +63,7 @@
 }
 .member-form__id {
     margin-top: 100px;
-}
+} 
 /*
 .member-form__id label,
 .member-form__pw label,
@@ -71,16 +73,15 @@
 .member-form__nickname label {
     display: block;
 }*/
-.member-form__name,
+.member-form__name, 
 .member-form__gender {
-    width: 45%;
     display: inline-block;
 }
 .member-form span[role="alert"] {
     display: none;
-}
+} 
 /* 데스크탑 화면 */
-@media all and (min-width:767px) {
+/* @media all and (min-width:767px) {
 
     .member {
         width: 742px;
@@ -90,5 +91,11 @@
         border: none;
         margin: auto;
         width: 20vw;
+    }
+} */
+@media all and (min-width: 767px) {
+    .member {
+        width: 742px;
+        margin: auto;
     }
 }
