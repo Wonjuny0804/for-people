@@ -25,11 +25,29 @@ a {
 /* 로그인 메인 컨테이너 */
 .main-container {
   background: var(--theme-dark) url(./images/coffee-background.png) no-repeat 0 0 / 100% 100%;
+  /* filter: blur(5px); */
   padding: 100px;
 }
+/* .main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: 1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: url(#main-container);
+} */
 /* 로그인 섹션 */
 .sign-in {
   background-color: var(--theme-light3);
+  /* background-image: url(./images/Barista.png) no-repeat;
+  background-position: 50% 50%; */
   width: 742px;
   height: 614px;
   margin-left: auto;
@@ -37,6 +55,7 @@ a {
   border-radius: 6px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 20px 25px 0 rgba(0, 0, 0, 0.19);
 }
+
 /* 로그인 제목과 설명 */
 .sign-in__headline {
   text-transform: uppercase;
@@ -53,6 +72,7 @@ a {
   margin-top: 0;
   margin-bottom: 25px;
   text-align: center;
+  line-height: 2;
 }
 /* 로그인 입력서식 */
 .sign-in__form {
@@ -87,7 +107,7 @@ a {
 }
 .placeholder {
   position: absolute;
-  top: 26px;
+  top: 25px;
   left: 0.7em;
   font-size: 13px;
   color: var(--theme-main);
@@ -95,20 +115,37 @@ a {
 }
 .member-id input:focus,
 .member-pw input:focus {
-  border: 2px solid var(--theme-point);
+  border: 1px solid var(--theme-main);
   
 }
 .member-pw {
   margin-top: 20px;
 }
-/* .member-id--error,
-.member-pw--error {
+.member-id input:focus + p,
+.member-pw input:focus + p {
+  visibility: hidden;
+}
+.member-id--error,
+.member-pw--error,
+.sign-in--error {
   display: none;
-} */
+}
 
 /* 아이디 및 패스워드 폼 상태 디자인 */
-/* .is--invaild {
+.is--invalid [role="alert"] {
   display: inline-block;
+}
+.is--invalid input {
+  border: 1px solid #E27762;
+}
+/* .is--invalid input::after {
+  content: "";
+  background: url(./images/error\ icon.png) no-repeat;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  top: 5px;
+  right: 0;
 } */
 /* 아이디 및 패스워드 에러 메세지 */
 .member-id [role="alert"],
@@ -118,7 +155,7 @@ a {
   position: absolute;
   height: 18px;
   line-height: 18px;
-  top: 2px;
+  top: 0;
 }
 .member-id [role="alert"] {
   left: 60px;
@@ -137,6 +174,67 @@ a {
   flex-flow: row nowrap;
 }
 .save-id, .keep-sign-in {
+  width: 220px;
+  position: relative;
+  display: inline-block;
+}
+.save-id input, .keep-sign-in input {
+  opacity: 0;
+  display: inline-block;
+  outline: none;
+  width: 40px;
+  height: 15px;
+  padding: 0 10px;
+  transform: scale(1.5, 1.5);
+  z-index: 10;
+}
+.sign-in__checkbox {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 15px;
+  top: 3px;
+  left: 0;
+  border-radius: 15px;
+  background: #CFCCC7;
+  transition: all 0.2s;
+}
+
+.sign-in__checkbox::before {
+  content: "";
+  position: absolute;
+  background: #CFCCC7;
+  left: -1px;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  z-index: 2;
+  transition: all 0.2s;
+}
+.save-id input:checked + span,
+.keep-sign-in input:checked + span {
+  background: var(--theme-main);
+  opacity: 0.6;
+}
+.save-id input:checked + span::before,
+.keep-sign-in input:checked + span:before {
+  transform: translateX(20px);
+  background: var(--theme-main);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  opacity: 1;
+}
+.save-and-keep label {
+  color: var(--theme-main);
+  font-size: 14px;
+  cursor: pointer;
+  /* display: inline-block; */
+  /* padding-left: 40px; */
+}
+
+/* 
+.save-id, .keep-sign-in {
   font-size: 14px;
   width: 220px;
 }
@@ -150,10 +248,8 @@ a {
 .save-and-keep label {
   color: var(--theme-main);
   font-size: 14px;
-}
-.save-and-keep input:checked {
+} */
 
-}
 /* 로그인 인포 */
 .sign-in__info {
   width: 410px;
@@ -232,15 +328,46 @@ a {
 
 /* 공통푸터 */
 .footer {
+  position: relative;
   background-color: var(--theme-dark);
+  color: rgba(255, 252, 249, 0.6);
+}
+/* 푸터 로고 */
+.footer__brand-logo {
+  position: absolute;
 }
 /* 푸터 인포 */
+.site-info {
+  padding: 30px 180px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255, 252, 249, 0.2);
+}
+.site-info li {
+  font-size: 16px;
+  font-weight: 700;
+}
 
 /* 푸터 주소 */
 .address {
+  font-style: normal;
+  font-size: 14px;
   text-align: center;
+  padding-top: 170px;
+  line-height: 1.5;
 }
 /* 카피라이터 */
 .copyright {
-  
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-top: 30px;
+  padding-bottom: 60px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* 상단 이동 */
+.gototop {
+
 }
