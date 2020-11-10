@@ -1,0 +1,64 @@
+@import url('./variables.css');
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+.member {
+    text-align:center;
+    display: block;
+    flex-flow: row wrap;
+    width: max;
+    background-color: var(--theme-bright2);
+    color : var(--theme-main);
+}
+.member__headline {
+    text-transform: uppercase;
+}
+.member__intro {
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--theme-main);
+    font-size: .8em;
+}
+.member-form fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.member-form legend {
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.member-form label {
+    display: block;
+}
+/*
+.member-form__id label,
+.member-form__pw label,
+.member-form__pw-check label,
+.member-form__name label,
+.member-form__phone label,
+.member-form__nickname label {
+    display: block;
+}*/
+.member-form__name,
+.member-form__gender {
+    width: 45%;
+    display: inline-block;
+}
+.member-form span[role="alert"] {
+    display: none;
+}
+/* 데스크탑 화면 */
+@media all and (min-width:767px) {
+
+    .member {
+        width: 742px;
+        margin: auto;
+    }
+}
