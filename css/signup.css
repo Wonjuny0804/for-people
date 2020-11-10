@@ -2,6 +2,7 @@
 /* 전체 레이아웃 설정*/
 .body {
     min-width: 760px;
+    font-size: 16px;
 }
 .member {
     text-align:center;
@@ -58,6 +59,7 @@
     height: 30px;
     background-color: transparent;
     border: 1px solid var(--theme-light);
+    border-radius: 3px;
 }
 .member-form__id {
     margin-top: 100px;
@@ -78,6 +80,7 @@
     width: 48%;
 }
 .member-form__name {
+    width: 52%
 }
 .member-form__gender {
     float: right;
@@ -87,7 +90,7 @@
 }
 .member-form__gender--title {
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 1000;
     margin-top: 2px;
     margin-bottom: 10px;
@@ -99,7 +102,7 @@
 .gender-options label {
     width: 15%;
     line-height: 30px;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 .member-form__gender input{
     width: 10vw;
@@ -108,6 +111,43 @@
 .member-form span[role="alert"] {
     display: none;
 } 
+/* 생년월일 레이아웃과 디자인*/
+.member-form__birthday fieldset {
+    display: flex;
+    padding: 0;
+    flex-flow : row nowrap;
+    margin-bottom: 5px;
+}
+.member-form__birthday legend {
+    font-size: 1.3em;
+    text-align: left;
+    font-weight: 1000;
+    margin-bottom: 10px;
+}
+.member-form__birthday select {
+    height: 30px;
+    margin-right: 5px;
+    border: solid 1px var(--theme-light);
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
+.member-form__birthday [name="user_year"]{
+    width :25%
+}
+.member-form__birthday [name="user_month"]{
+    width :15%
+}
+.member-form__birthday [name="user_date"]{
+    width :15%
+}
+.form-birthday__addword::before {
+    background: no-repeat url(./images/sign-up-sprite.png);
+}
+.form-birthday__addword {
+
+    text-align: left;
+}
 /* 데스크탑 화면 */
 /* @media all and (min-width:767px) {
 
