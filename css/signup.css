@@ -71,6 +71,7 @@
 .member-form__nickname label {
     display: block;
 }*/
+/* 이름, 성별 배치 */
 .member-form__name, 
 .member-form__gender {
     display: inline-block;
@@ -84,7 +85,7 @@
 .member-form__gender legend {
     display: block;
 }
-.member-form__gender--label {
+.member-form__gender--title {
     text-align: left;
     font-size: 1.2rem;
     font-weight: 1000;
@@ -96,9 +97,13 @@
     display: flex;
 }
 .gender-options label {
-    width: 50%;
+    width: 15%;
+    line-height: 30px;
+    font-size: 1.4em;
 }
 .member-form__gender input{
+    width: 10vw;
+    padding: 0;
 }
 .member-form span[role="alert"] {
     display: none;
