@@ -1,9 +1,10 @@
 @import url('./variables.css');
-
+/* body 초기화*/
 .body {
     margin: 0;
     padding: 0;
 }
+/* 전체 레이아웃 설정*/
 .member {
     text-align:center;
     display: block;
@@ -37,10 +38,12 @@
     height: 1px;
     margin: -1px;
 }
+/* input공통 영역 제어 코드 */
 .member-form label {
     display: block;
     width: 100%;
     text-align:left;
+    font-weight: 1000;
 }
 .member-form label::after{
     background: no-repeat url('../css/images/sign-up-sprite.png') 0 0/ 50% 50%;
@@ -49,9 +52,9 @@
     position: absolute;
     right: 0;
 }
-
+/* input에 대한 공통 속성 주기 */
 .member-form input {
-    width: 95%;
+    width: 100%;
     height: 30px;
     background-color: transparent;
     border: 1px solid var(--theme-light);

@@ -1,4 +1,4 @@
-
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 /* jwkim 코드 ================== */
 /* reset 코드 */
 h1,h2,h3,h4,h5,h6{
@@ -68,3 +68,134 @@ a {
     padding-left: 0;
     list-style: none;
 }
+
+/* gabae 코드 ======================================*/
+
+
+/* reset 코드 */
+/* 스타일 초기화 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 기본 폰트 */
+html {
+    font-size: 10px;
+    line-height: 1.15;
+}
+
+body {
+    width: 1440px;
+    margin: 0 auto;
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #fff;  
+}
+
+/* 조립 코드 */
+.a11y-hidden, legend{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+}  
+  
