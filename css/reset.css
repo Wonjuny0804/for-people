@@ -11,6 +11,7 @@ ul, ol{
   line-height: 1;
 }
 a{
+  color: inherit;
   text-decoration: none;
 }
 
@@ -58,10 +59,12 @@ fieldset {
     height: 1px;
     margin: -1px;
   }
+/*  겹치는 코드
 a {
     color: inherit;
     text-decoration: none;
 }
+*/
 .reset-list {
     margin-top: 0;
     margin-bottom: 0;
@@ -163,21 +166,12 @@ video {
   box-sizing: border-box;
   vertical-align: baseline;
 }
-
-ul {
-  list-style-type: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 /* 기본 폰트 */
 html {
     font-size: 10px;
     line-height: 1.15;
 }
-
+/*
 body {
     width: 1440px;
     margin: 0 auto;
@@ -186,16 +180,4 @@ body {
     font-weight: 400;
     background-color: #fff;  
 }
-
-/* 조립 코드 */
-.a11y-hidden, legend{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: 0;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
-    clip: rect(0 0 0 0);
-    clip: rect(0, 0, 0, 0);
-}  
-  
+  */
