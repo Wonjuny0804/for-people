@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>signup page</title>
-    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!-- 회원가입 시트 작성 -->
@@ -16,7 +16,7 @@
        <!-- 회원가입 폼 -->
        <form action="#" class="member-form" method="POST">
            <fieldset>
-               <legend>회원가입 폼</legend>
+               <legend class="a11y-hidden">회원가입 폼</legend>
                <!-- 회원가입 아이디-->
                <div class="member-form__id">
                     <label for="userEmail">아이디</label>
@@ -49,19 +49,22 @@
                <!-- 회원가입 성별 -->
                <!--radiogroup-->
                <div class="member-form__gender">
-                    <p class="member-form__gender__label">성별</p>
-                    <label for="male">male</label>
-                    <input type="radio" id="male" name="gender" value="male"/>
-                    <label for="female">female</label>
-                    <input type="radio" id="female" name="gender" value="female"/>
-               </div>
+    
+                    <p class="member-form__gender--title">성별</p>
+                    <div class="gender-options">
+                      <input type="radio" id="female" name="gender" value="female"/>
+                      <label for="female">여성</label>
+                      <input type="radio" id="male" name="gender" value="male">
+                      <label for="male">남성</label>
+                    </div>
+              </div>
                <!-- 회원가입 생년월일 -->
                <div class="member-form__birthday">
                     
                     <fieldset>
                         <legend>생년월일</legend>
-                        <label for="year">년도</label>
-                        <select name="userYearOfBirth" id="year" aria-label="출생년도">
+                        <label for="year" class="a11y-hidden">년도</label>
+                        <select name="user_year" id="year" aria-label="출생년도">
                             <option value="">년도</option>
                             <option value="2020">2020</option>
                             <option value="2019">2019</option>
@@ -155,8 +158,8 @@
                             <option value="1931">1931</option>
                             <option value="1930">1930</option>
                         </select>
-                        <label for="month">월</label>
-                        <select name="userMonthOfBirth" id="month" aria-label="출생월">
+                        <label for="month" class="a11y-hidden">월</label>
+                        <select name="user_month" id="month" aria-label="출생월">
                         <option value="">월</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -171,8 +174,8 @@
                         <option value="11">11</option>
                         <option value="12">12</option>
                         </select>
-                        <label for="date">일</label>
-                        <select name="userDateOfBirth" id="date" aria-label="출생일">
+                        <label for="date" class="a11y-hidden">일</label>
+                        <select name="user_date" id="date" aria-label="출생일">
                         <option value="">일</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -206,13 +209,13 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                         </select>
-                        <label for="metonicCyle">양음력</label>
-                        <select name="userMetonicCyle" id="metonicCyle" aria-label="양음력">
+                        <label for="metonicCyle" class="a11y-hidden">양음력</label>
+                        <select name="user_metonic" id="metonicCyle" aria-label="양음력">
                         <option value="양력">양력</option>
                         <option value="음력">음력</option>
                         </select>
                     </fieldset>
-                    <p class="member-form__addword"> 회원 가입 완료 후, Cafe W 카드를 등록하시면 무료음료 쿠폰이 발행됩니다.</p>
+                    <p class="form-birthday__addword"> 회원 가입 완료 후, Cafe W 카드를 등록하시면 무료음료 쿠폰이 발행됩니다.</p>
                </div>
                <!-- 회원가입 전화번호 -->
                <div class="member-form__phone">
