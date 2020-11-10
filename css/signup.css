@@ -8,17 +8,20 @@
     text-align:center;
     display: block;
     flex-flow: row wrap;
-    width: max;
-    background-color: var(--theme-bright2);
+    background-color: var(--theme-light2);
     color : var(--theme-main);
+    border: 1px solid var(--theme-light);
 }
 .member__headline {
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 .member__intro {
     text-transform: uppercase;
-    border-bottom: 1px solid var(--theme-main);
+    border-bottom: 2px solid var(--theme-light);
     font-size: .8em;
+    margin-top: 0;
+    padding-bottom: 35px;
 }
 .member-form fieldset {
     border: none;
@@ -36,6 +39,25 @@
 }
 .member-form label {
     display: block;
+    width: 100%;
+    text-align:left;
+}
+.member-form label::after{
+    background: no-repeat url('../css/images/sign-up-sprite.png') 0 0/ 50% 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+}
+
+.member-form input {
+    width: 95%;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid var(--theme-light);
+}
+.member-form__id {
+    margin-top: 100px;
 }
 /*
 .member-form__id label,
@@ -60,5 +82,10 @@
     .member {
         width: 742px;
         margin: auto;
+    }
+    .member-form fieldset {
+        border: none;
+        margin: auto;
+        width: 20vw;
     }
 }
