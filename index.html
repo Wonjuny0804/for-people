@@ -284,8 +284,21 @@
               </div>
             </li>
           </ul>
-          <button type="button" class="multi__btn-prev is-active title="멀티 캠퍼스 이전 페이지"></button>
+          <button type="button" class="multi__btn-prev is-active" title="멀티 캠퍼스 이전 페이지"></button>
           <button type="button" class="multi__btn-next is-active" title="멀티 캠퍼스 다음 페이지"></button>
+        <div class="multi__pagination-container">
+          <button type="button" class="btn-play" >
+            <svg></svg>
+          </button>
+          <button type="button" class="btn-pause">
+            <svg></svg>
+          </button>
+          <ul class="pagination">
+            <li><a href="#page-1" class="pageno on" data-page-no="1" aria-current="page">1</a></li>
+            <li><a href="#page-2" class="pageno" data-page-no="2">2</a></li>
+            <li><a href="#page-3" class="pageno" data-page-no="3">3</a></li>
+          </ul>
+        </div>
         </section>
         <!-- 이듬 블랜디드 러닝 추천 강좌 -->
         <section class="euid">
@@ -421,8 +434,21 @@
               </div>
             </li>
           </ul>
-          <button type="button" class="euid__btn-prev" title="이듬 블랜디드 이전 페이지"></button>
-          <button type="button" class="euid__btn-next" title="이듬 블랜디드 다음 페이지"></button>
+        <button type="button" class="euid__btn-prev" title="이듬 블랜디드 이전 페이지"></button>
+        <button type="button" class="euid__btn-next" title="이듬 블랜디드 다음 페이지"></button>
+        <div class="euid__pagination-container">
+          <button type="button" class="btn-play" >
+            <svg></svg>
+          </button>
+          <button type="button" class="btn-pause">
+            <svg></svg>
+          </button>
+          <ul class="pagination">
+            <li><a href="#page-1" class="pageno on" data-page-no="1" aria-current="page">1</a></li>
+            <li><a href="#page-2" class="pageno" data-page-no="2">2</a></li>
+            <li><a href="#page-3" class="pageno" data-page-no="3">3</a></li>
+          </ul>
+        </div>
         </section>
       </section>
       <!-- section 03 -->
@@ -541,8 +567,69 @@
           <li class="lab-barista"><a href="#" title="랩 바리스타 바로가기">LAB BARISTA</a></li>
         </ul>
       </section>
-      <!-- section 08 -->
-      <div class="visual"></div>
+      <div class="course-box">
+        <!-- 인기 강좌 순위 -->
+        <section class="course-favorite">
+          <h3 class="favorite-heading" id="favoriteHeading">카페 <em>W</em> 인기 강좌</h3>
+          <ol class="favorite-list">
+            <li class="favorite-list__item">
+              <a href="#">UI 구조 &amp; 디자인</a><em class="up">상승</em>
+            </li>
+            <li class="favorite-list__item">
+              <a href="#">모바일 웹 UI 제작 실습</a><em class="new">새 강좌</em>
+            </li>
+            <li class="favorite-list__item">
+              <a href="#">UI 인터랙션 주니어</a><em class="down">하락</em>
+            </li>
+            <li class="favorite-list__item">
+              <a href="#">React 프로그래밍</a><em class="stop">멈춤</em>
+            </li>
+          </ol>
+          <a href="#" class="favorite__more" aria-labelledby="favoriteHeading" title="카페 W 인기 강좌">더보기</a>
+        </section>
+        <!-- 강좌 브로슈어 -->
+        <section class="course-brochure">
+          <h3 class="brochure__download"><a href="#" title="카페 W 브로슈어 다운받기">브로슈어 다운받기</a></h3>
+          <svg></svg>
+        </section>
+      </div>
+    </section>
+
+    <!-- section 06 -->
+    <section class="section-container pick-favorite-container">
+      <h2 class="a11y-hidden">카페 더블유의 다양한 상품 안내</h2>
+      <p class="pick-favorite__headline">
+        <span class="headline-01">PICK</span>
+        <span class="headline-02">YOUR</span>
+        <span class="headline-03">FAVORITE</span>
+      </p>
+      <p class="pick-favorite__text">
+        <em>다양한 메뉴를 카페 W에서 즐겨보세요</em>
+        카페 W만의 특별함을 경험할 수 있는 최상의 선택 음료 카페
+        W 커피와 완벽한 어울림을 자랑하는 푸드
+        다양한 시도와 디자인으로 가치를 더하는 상품
+        소중한 사람에게 마음을 전하는 가장 좋은 방법. 카페 W 카드
+      </p>
+      <a href="#" class="pick-favorite__more" title="카페 더블유의 다양한 상품 안내">자세히 보기</a>
+      <ul>
+        <li><svg></svg></li>
+        <li><svg></svg></li>
+        <li><svg></svg></li>
+      </ul>
+    </section>
+    <!-- 우측 이미지 3장은 background 처리 -->
+
+    <!-- section 07 -->
+    <section class="section-container lab-container">
+      <h2 class="lab-headline" lang="en">CAFE W COFFEE LAB</h2>
+      <p class="lab-text">최고의 커피를 향한 끊임없는 노력, <em>카페 W 커피연구소</em></p>
+      <ul>
+        <li class="lab-menu"><a href="#" title="랩 메뉴 바로가기">LAB MENU</a></li>
+        <li class="lab-barista"><a href="#" title="랩 바리스타 바로가기">LAB BARISTA</a></li>
+      </ul>
+    </section>
+    <!-- section 08 -->
+    <div class="visual"></div>
       <!-- section 09 -->
       <section>
         <h2 class="a11y-hidden">카페 더블유, 매장 찾기</h2>
