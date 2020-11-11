@@ -19,21 +19,35 @@ a {
 .reset-list {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  /* padding-left: 0; */
   list-style: none;
 }
 /* 로그인 메인 컨테이너 */
 .main-container {
   background: var(--theme-dark) url(./images/coffee-background.png) no-repeat 0 0 / 100% 100%;
+  position: relative;
 }
 .main-container::before,
 .main-container::after {
   content: "";
-  background: url(./images/Star.svg) no-repeat 0 0;
+  position: absolute;
+  width: 70px;
+  height: 95px;
+  background: url(./images/StarSymbol.svg) no-repeat 0 0;
+}
+.main-container::before {
+  top: 360px;
+  left: 15%;
+  z-index: 1;
+}
+.main-container::after {
+  top: 360px;
+  right: 15%;
 }
 /* 메인 섹션 이미지 블러처리 */
 .bg {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px) grayscale(20%);
+  /* backdrop-filter: grayscale(20%); */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -348,28 +362,48 @@ a {
   font-size: 14px;
 }
 /* 공통푸터 */
+.footer-container{
+  position: relative;
+  width: 100%;
+  background: var(--theme-dark);
+}
 .footer {
   position: relative;
-  background-color: var(--theme-dark);
+  width: 1420px;
+  margin: 0 auto;
   color: rgba(255, 252, 249, 0.6);
+}
+.footer-container::after{
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 252, 249, 0.2);
+  position: absolute;
+  top: 82px;
+  left: 0;
 }
 /* 푸터 로고 */
 .footer__brand-logo {
   position: absolute;
-  background: url(./images/CafeW-Vertical.svg) no-repeat 0 0;
+  /* background: url(./images/CafeW-Vertical.svg) no-repeat 0 0; */
   width: 77px;
-  height: 100px;
+  height: 90px;
   top: 122px;
   left: 50%;
   transform: translateX(-50%);
 }
+
+.footer__brand-logo svg{
+  width: 100px;
+  height: 100%;
+}
+
 /* 푸터 인포 */
 .site-info {
   padding: 30px 180px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
-  border-bottom: 1px solid rgba(255, 252, 249, 0.2);
+  justify-content: space-between;
 }
 .site-info li {
   font-size: 16px;
