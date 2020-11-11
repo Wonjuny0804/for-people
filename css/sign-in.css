@@ -3,7 +3,7 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-.a11y-hidden{
+.a11y-hidden {
   overflow: hidden;
   position: absolute !important;
   clip: rect(0, 0, 0, 0);
