@@ -19,6 +19,17 @@
     width: 100px;
     height: 100px;
 }
+/* input에 대한 공통 속성 주기 */
+.member-form input {
+    outline: none;
+    width: 100%;
+    height: 34px;
+    background-color: transparent;
+    border: 1px solid var(--theme-light);
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
 /* 헤드라인과 인트로 글귀 디자인*/
  .member__headline {
     text-align: center;
@@ -42,10 +53,7 @@
 }
 /* alert 메세지 */
 .is--invalid [role="alert"] {
-    display: inline-block;
-    font-size: 1.1rem;
-}
-.member-form__id [role="alert"] {
+  display: inline-block;
   font-size: 1.1rem;
   color: var(--theme-point);
   text-align: left;
@@ -53,12 +61,19 @@
   line-height: 18px;
   top: 0;
 }
-.member-id [role="alert"] {
-  left: 60px;
+.is--invalid::after {
+    content: "";
+    background-image: url('./images/error.svg');
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    transform: scale( 1.3);
 }
 .is--invalid input {
     border: 1px solid var(--theme-point);
-    color: var(--theme-point) !important;
+    color: var(--theme-point);
 }
 /* 필드셋 안에 있는 요소들 레이아웃*/
 .member-form fieldset {
@@ -98,14 +113,8 @@
     top:20;
     right:0;
 } 
-/* input에 대한 공통 속성 주기 */
-.member-form input {
-    width: 100%;
-    height: 34px;
-    background-color: transparent;
-    border: 1px solid var(--theme-light);
-    border-radius: 3px;
-}
+
+
 .member-form__id {
     margin-top: 100px;
     position: relative;
@@ -393,6 +402,11 @@
     font-weight: 700;
     font-size: 1.6em;
 }
+button[disabled]:hover {
+    background-color: #CBC5BE;
+    color:#7D6F5D;
+    cursor: not-allowed;
+  }
 /* 데스크탑 화면 */
 @media all and (min-width: 767px) {
     .member {
