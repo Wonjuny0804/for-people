@@ -42,22 +42,33 @@
     text-align:left;
     font-weight: 1000;
     font-size: 1.3em;
-    height: 25px;
-    line-height: 25px;
+    height: 34px;
+    line-height: 34px;
 }
 /* 필수 입력요소 가상요소 선택자*/
-.member-form label::after{
-    background-color: blue;
-    background: no-repeat url('../css/images/sign-up-sprite.png') 0 0/ 50% 50%;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    right: 0;
+.member-form__id label::after,
+.member-form__pw label::after,
+.member-form__pw-check label::after,
+.member-form__name label::after,
+.member-form__gender .member-form__gender--title::after,
+.member-form__birthday legend::after,
+.member-form__phone label::after,
+.member-form__auth .member-form__auth-title::after{
+    content: "";
+    background-image: url("./images/must.svg");
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: 25% 50%;
+    width: 10px;
+    height:20px;
+    display: inline-block;  
+    top:20;
+    right:0;
 } 
 /* input에 대한 공통 속성 주기 */
 .member-form input {
     width: 100%;
-    height: 30px;
+    height: 34px;
     background-color: transparent;
     border: 1px solid var(--theme-light);
     border-radius: 3px;
@@ -139,7 +150,7 @@
     font-size: 1.2em;
 }
 .member-form__birthday [name="user_year"]{
-    width :25%
+    width :30%
 }
 .member-form__birthday [name="user_month"]{
     width :15%
@@ -242,7 +253,26 @@
     top: -2px;
     right: 10px;
     width: 20px;
-    
+}
+/* 선택항목에 대한 문구 꾸미기*/
+.memeber-form__instruction {
+    font-size: 1.2em;
+    font-weight: 400;
+    height: 17px;
+    line-height: 17px;
+}
+/* 회원 가입 버튼*/
+.member-form__button {
+    margin-top: 20px;
+}
+.member-form__button .signup-button {
+    background-color: var(--theme-main);
+    color: var(--theme-light5);
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.6em;
 }
 /* 데스크탑 화면 */
 /* @media all and (min-width:767px) {
