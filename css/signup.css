@@ -36,7 +36,7 @@
 }
 /* input공통 영역 제어 코드 */
  .member-form label {
-    background-color: yellow;
+    /* background-color: yellow; */
     display: block;
     width: 100%;
     text-align:left;
@@ -189,35 +189,36 @@
     height: 100%;
 
 }
-
 .member-form__auth li:first-child {
     border-right: 1px solid var(--theme-light);
-}
-.member-form__auth li:last-child {
 }
 .member-form__auth figure {
     width: 100%;
     height: 80%;
     padding: 10px 20px 0 20px;
-
+    text-align: center;
+    margin-bottom: 10px;
 }
 .member-form__auth img{
     height: 45%;
 }
 .member-form__auth figcaption {
-    margin-top: 10px;
+    margin-top: 6px;
+    font-size: 1.2rem;
 }
 .member-form__auth span {
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     display: block;
 }
 .member-form__auth a {
     background: var(--theme-main);
     color: var(--theme-light5);
-    padding: 5px 25px;
+    padding: 7px 25px;
     border-radius: 3px;
     font-weight: 500;
+    font-size: 1.2rem;
 }
 .member-form__auth a:hover {
     background:var(--theme-dark);
@@ -255,11 +256,18 @@
     width: 20px;
 }
 /* 선택항목에 대한 문구 꾸미기*/
-.memeber-form__instruction {
-    font-size: 1.2em;
+.member-form__instruction {
+    font-size: 1.2rem;
     font-weight: 400;
     height: 17px;
     line-height: 17px;
+}
+.member-form__instruction::before {
+    content: " ";
+    /* background-image: url('./images/Star.svg'); */
+    background-color: red;
+    width: 17px;
+    height: 17px;
 }
 /* 회원 가입 버튼*/
 .member-form__button {
@@ -275,21 +283,82 @@
     font-size: 1.6em;
 }
 /* 데스크탑 화면 */
-/* @media all and (min-width:767px) {
-
-    .member {
-        width: 742px;
-        margin: auto;
-    }
-    .member-form fieldset {
-        border: none;
-        margin: auto;
-        width: 20vw;
-    }
-} */
 @media all and (min-width: 767px) {
     .member {
         width: 742px;
         margin: auto;
+        margin-top: 104px;
+        border-radius: 3px;
     }
-}
+    .member-form {
+        width: 438px;
+        margin: auto;
+    }
+    /* 헤드라인 디자인 */
+    .member__headline {
+        font-weight: 700;
+        font-size: 3.6rem;
+    }
+    .member__intro {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    /* 아이디 섹션 디자인 */
+    .member-form__id {
+        margin-top: 147px;
+    }
+    /* 수직 간격 디자인 */
+    .member-form__id,
+    .member-form__pw,
+    .member-form__pw-check,
+    .member-form__name,
+    .member-form__birthday,
+    .member-form__phone,
+    .member-form__nickname,
+    .member-form__privacy-policy,
+    .member-form__auth {
+        margin-bottom: 20px;
+    }
+    /* 인증방식 디자인 */
+    .member-form__auth {
+
+    }
+    /* 선택적 개인정보 동의 디자인 */
+    .member-form__privacy-policy {
+        /* height: 169px; */
+    }
+    .member-form__privacy-policy .policy-body {
+        border: 1px solid var(--theme-light);
+        height: 169px;
+    }
+    /* 선택적 개인정보 내용 디자인 */
+    .member-form__privacy-policy .policy-body span {
+        display: block;
+        text-align: left;
+        margin: 17px;
+    }
+    /* 인증방식 디자인*/
+    .member-form__auth {
+        height: 257px;
+    }
+    .member-form__auth ul {
+        height: 230px;
+    }
+    
+    /* 데스크탑에서는 이미지값을 고정으로 준다.  */
+    .member-form__auth li:first-child img{
+        margin-top: 25px;
+        width: 33px;
+        height: 55px;
+    }
+    .member-form__auth li:last-child img{
+        width: 98px;
+        height: 81px;
+    }
+    .member-form__auth figure {
+        padding: 10px 20px 0 20px;
+    }
+    .member-form__auth figcaption {
+        margin-top: 10px;
+    }
+ }
