@@ -42,7 +42,8 @@
     text-align:left;
     font-weight: 1000;
     font-size: 1.3em;
-    height: 25px
+    height: 25px;
+    line-height: 25px;
 }
 /* 필수 입력요소 가상요소 선택자*/
 .member-form label::after{
@@ -77,13 +78,14 @@
 .member-form__name, 
 .member-form__gender {
     display: inline-block;
-    width: 48%;
+    
 }
 .member-form__name {
     width: 52%
 }
 .member-form__gender {
     float: right;
+    width: 45%;
 }
 .member-form__gender legend {
     display: block;
@@ -100,7 +102,7 @@
     display: flex;
 }
 .gender-options label {
-    width: 15%;
+    width: 20%;
     line-height: 30px;
     font-size: 1.3em;
 }
@@ -211,6 +213,36 @@
 }
 /* 닉네임 */
 .member-form__nickname {
+}
+/*선택적 개인정보 수집동의 및 이용약관*/
+.member-form__privacy-policy {
+    width: 100%;
+    position:relative;
+}
+.member-form__privacy-policy .policy-body {
+    margin-top: 5px;
+    border: 1px solid var(--theme-light3);
+    height: 100px;
+    overflow: auto;
+    font-size: 1.2em;
+    background-color: var(--theme-light3);
+}
+/* 스크롤바 꾸며주기 */
+.member-form__privacy-policy .policy-body::-webkit-scrollbar {
+    border-radius: 2px;
+    width: 4px;
+    background-color: var(--theme-brown);
+}
+.member-form__privacy-policy .policy-body::-webkit-scrollbar-thumb {
+    background-color: var(--theme-main);
+    border-radius: 2px;
+}
+.member-form__privacy-policy input {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    width: 20px;
+    
 }
 /* 데스크탑 화면 */
 /* @media all and (min-width:767px) {
