@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="no-js">
   <head>
-    <meta charset="UTF-8">
-    <title>Cafe W</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
-    <script src="../js/home.js" defer></script>
+    <meta charset="UTF-8" />
+    <title>카페 더블유(Cafe W)</title>
+    <meta name="description" content="커페 더블유 사이트입니다." />
+    <meta name="keywords" content="카페 더블유, 카페, 더블유 커피, 커피, 웹 접근성 강의, 이듬" />
+    <meta name="author" content="for-people" />
     
     <!-- 풍부한 meta -->
     <!-- link > preload, prefetch, preconnect -->
@@ -15,9 +15,21 @@
         - 현재 페이지에서 반드시 사용되는 리소스는 preload 합니다.
         - 미래에 사용되는 리소스는 prefetch 합니다.
     -->
+
+    <link rel="preconnect" href="//spoqa.github.io" />
+    <link rel="preconnect" href="//cdnjs.cloudflare.com" />
+    <link rel="preload" as="style" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
+    <link rel="preload" as="style" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preload" as="style" href="./css/style.css" />
+
+    <!-- 스타일링 -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- 브라우저별 지원하는 속성표시 -->
+    <script src="./js/modernizr-custom.js"></script>
   </head>
   <body>
-    <!-- header -->
     <div class="header-container">
       <!-- skip-nav -->
       <div class="skip-nav">
@@ -29,9 +41,7 @@
         <div class="header__top-menu flex-default">
           <h1 class="header__headline">
             <a href="#">
-              <svg>
-                <use xlink:href="../images/sprite-sheet.svg#logo" />
-              </svg>
+              <svg><use xlink:href="#logo"></use></svg>
             </a>
             <span class="a11y-hidden">CAFE W</span>
           </h1>
@@ -51,7 +61,7 @@
               <input type="text" id="searchForm" class="search__form" name="search" required />
               <a href="#" class="search__btn" title="검색">
                 <svg class="icon">
-                  <use xlink:href="../images/sprite-sheet.svg#search" />
+                  <use xlink:href="#Search"></use>
                 </svg>
               </a>
             </fieldset>
@@ -60,7 +70,7 @@
         <nav class="navigation" id="Navigation">
           <h2 class="a11y-hidden">메인 메뉴</h2>
           <ul class="nav__menu flex-default">
-            <li class="nav__list" onmouseover="mover()" onmouseout="mout()">
+            <li class="nav__list">
               <h3 class="nav__headline"><a href="#">Drinks</a></h3>
               <ul class="nav__items">
                 <li><a href="#">콜드 브루</a></li>
@@ -68,7 +78,7 @@
                 <li><a href="#">기타 제조 음료</a></li>
               </ul>
             </li>
-            <li class="nav__list" onmouseover="mover()" onmouseout="mout()">
+            <li class="nav__list">
               <h3 class="nav__headline"><a href="#">Foods</a></h3>
               <ul class="nav__items">
                 <li><a href="#">베이커리</a></li>
@@ -76,7 +86,7 @@
                 <li><a href="#">샌드위치 & 샐러드</a></li>
               </ul>
             </li>
-            <li class="nav__list" onmouseover="mover()" onmouseout="mout()">
+            <li class="nav__list">
               <h3 class="nav__headline"><a href="#">Products</a></h3>
               <ul class="nav__items">
                 <li><a href="#">머그</a></li>
@@ -84,7 +94,7 @@
                 <li><a href="#">커피용품</a></li>
               </ul>
             </li>
-            <li class="nav__list" onmouseover="mover()" onmouseout="mout()">
+            <li class="nav__list">
               <h3 class="nav__headline"><a href="#">Lectures</a></h3>
               <ul class="nav__items">
                 <li><a href="#">UI 구조 & 디자인</a></li>
@@ -92,7 +102,7 @@
                 <li><a href="#">리액트 프로그래밍</a></li>
               </ul>
             </li>
-            <li class="nav__list" onmouseover="mover()" onmouseout="mout()">
+            <li class="nav__list">
               <h3 class="nav__headline"><a href="#">Customer Service</a></h3>
               <ul class="nav__items">
                 <li><a href="#">공지사항</a></li>
@@ -104,549 +114,173 @@
         </nav>
       </header>
     </div>
-    <!-- main -->
+    <!-- main  -->
     <main class="main">
       <!-- section 01 -->
-      <section class="">
-        <h2 class="a11y-hidden">카페 더블유, 봄시즌 음료</h2>
-        <p>
-          <span lang="en">spring is a cup</span>
-          <span lang="en">of</span>
-          <span lang="en">choux</span>
-          <span lang="en">cream</span>
-          <span>봄이 왔다 커피가 설렌다</span>
-        </p>
-        <ul>
-          <li>
-            <a href="#">
-              <figure>
-                <img src="" alt="">
-                <figcaption>딸기 레이어 슈 크림 프라푸치노<span lang="en" aria-hidden="true">strawberry layer choux cream frappuccino</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <figure>
-                <img src="" alt="">
-                <img src="" alt="">
-                <figcaption>슈 크림 라떼</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <figure>
-                <img src="" alt="">
-                <img src="" alt="">
-                <figcaption>스프링 피치 그린 티</figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
-        <a href="#" class="more-info" title="시즌음료" aria-labelledby="">자세히보기</a>
-      </section>
-      <!-- section 02-->
-      <section class="section-container recommend-container">
-        <h2 class="a11y-hidden">카페 더블유 추천 강좌 목록</h2>
-        <!-- 멀티 캠퍼스 추천 강좌 -->
-        <section class="multi is-active">
-          <h2 class="multi__headline tab"><a href="#" role="button"><em>멀티 캠퍼스</em> 추천 강좌</a></h2>
-          <ul class="multi__list">
-            <!-- GIT & HTML/CSS -->
-            <li>
-              <div class="multi__class" aria-labelledby="multi__item1">
-                <h3 id="multi__item1"><em lang="en">GIT &amp; HTML/CSS</em> 입문자를 위한 GIT과 HTML&amp;CSS</h3>
-                <a role="button" class="multi__btn-detail" aria-haspopup="dialog">강의 정보</a>
-              </div>
-              <div class="multi__detail" role="dialog" aria-labelledby="multi__detail1">
-                <h3 class="detail__heading" id="multi__detail1"><em lang="en">GIT &amp; HTML/CSS</em> 입문자를 위한 GIT과 HTML&amp;CSS</h3>
-                <p>
-                  <svg></svg>
-                  <span class="detail__point">4</span>
-                  <span class="detail__text">점</span>
-                </p>
-                <table class="detail__info-table">
-                  <caption class="a11y-hidden">카페 더블유 추천 강좌 상세 정보</caption>
-                  <tr>
-                    <th scope="row">학습시간</th>
-                    <td>09:00 ~ 17:00 ( 8시간 )</td>
-                    <th scope="row">난이도</th>
-                    <td>초급</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교육비 지원</th>
-                    <td>고용보험 비환급</td>
-                    <th scope="row">평가항목</th>
-                    <td>출석률 100%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수료기준</th>
-                    <td>총점 80점 이상시 수료</td>
-                    <th scope="row">정원</th>
-                    <td>24 명</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교재정보</th>
-                    <td colspan="3">입문자를 위한 Git과 HTML&CSS
-                      HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)</td>
-                  </tr>
-                </table>
-                <button type="button" class="detail__close" title=" 상세정보 닫기">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
+      <div class="cafew-season-container">
+        <section class="cafew-season flex-default">
+          <h2 class="a11y-hidden">카페 더블유, 봄시즌 음료</h2>
+          <p class="season__txt">
+            <span lang="en" class="txt__01">spring is a cup</span>
+            <span lang="en" class="txt__02">of</span>
+            <span lang="en" class="txt__03">choux</span>
+            <span lang="en" class="txt__04">cream</span>
+            <span class="txt__05">봄이 왔다 커피가 설렌다</span>
+          </p>
+          <ul class="season__beverage">
+            <li class="beverage__item">
+              <a href="#">
+                <figure class="item__container-01">
+                  <img src="./images/Beverage_01.png" alt="">
+                  <figcaption class="item__details-01">
+                    <span lang="en" aria-hidden="true">
+                      strawberry layer
+                    </span>
+                    <span lang="en" aria-hidden="true">
+                      choux cream frappuccino
+                    </span>
+                    딸기 레이어 슈 크림 프라푸치노
+                  </figcaption>
+                </figure>
+              </a>
             </li>
-            <!-- RESPONSIVE WEB DESIGN STRATEGIES -->
-            <li>
-              <div class="multi__class" aria-labelledby="multi__item2">
-                <h3 id="multi__item2"><em lang="en">RESPONSIVE WEB DESIGN STRATEGIES</em> 반응형 웹디자인 전략</h3>
-                <a role="button" class="multi__btn-detail" aria-haspopup="dialog">강의 정보</a>
-              </div>
-              <div class="multi__detail" role="dialog" aria-labelledby="multi__detail2">
-                <h3 class="detail__heading" id="multi__detail2"><em lang="en">RESPONSIVE WEB DESIGN STRATEGIES</em> 반응형 웹디자인 전략</h3>
-                <p>
-                  <svg></svg>
-                  <span class="detail__point">4</span>
-                  <span class="detail__text">점</span>
-                </p>
-                <table class="detail__info-table">
-                  <caption class="a11y-hidden">카페 더블유 추천 강좌 상세 정보</caption>
-                  <tr>
-                    <th scope="row">학습시간</th>
-                    <td>09:00 ~ 17:00 ( 8시간 )</td>
-                    <th scope="row">난이도</th>
-                    <td>중급</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교육비 지원</th>
-                    <td>고용보험 비환급</td>
-                    <th scope="row">평가항목</th>
-                    <td>출석률 100%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수료기준</th>
-                    <td>총점 80점 이상시 수료</td>
-                    <th scope="row">정원</th>
-                    <td>25 명</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교재정보</th>
-                    <td colspan="3">한 권으로 끝내는 반응형 웹디자인 전략 (23,000원)</td>
-                  </tr>
-                </table>
-                <button type="button" class="detail__close" title="상세정보 닫기">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
+            <li class="beverage__item">
+              <a href="#">
+                <figure class="item__container-02">
+                  <figcaption class="item__details-02">
+                    <span lang="en" aria-hidden="true">
+                      choux cream latte
+                    </span>
+                    슈 크림 라떼
+                  </figcaption>
+                  <img src="./images/Beverage_02.png" alt="">
+                </figure>
+              </a>
             </li>
-            <!-- MOBILE WEB UI PRODUCTION LAB -->
-            <li>
-              <div class="multi__class" aria-labelledby="multi__item3">
-                <h3 id="multi__item3"><em lang="en">MOBILE WEB UI PRODUCTION LAB</em> 모바일 웹 UI 제작 실습</h3>
-                <a role="button" class="multi__btn-detail" aria-haspopup="dialog">강의 정보</a>
-              </div>
-              <div class="multi__detail" role="dialog" aria-labelledby="multi__detail3">
-                <h3 class="detail__heading" id="multi_detail3"><em lang="en">MOBILE WEB UI PRODUCTION LAB</em> 모바일 웹 UI 제작 실습</h3>
-                <p>
-                  <svg></svg>
-                  <span class="detail__point">5</span>
-                  <span class="detail__text">점</span>
-                </p>
-                <table class="detail__info-table">
-                  <caption class="a11y-hidden">카페 더블유 추천 강좌 상세 정보</caption>
-                  <tr>
-                    <th scope="row">학습시간</th>
-                    <td>09:00 ~ 18:00 ( 9시간 )</td>
-                    <th scope="row">난이도</th>
-                    <td>고급</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교육비 지원</th>
-                    <td>국비 지원</td>
-                    <th scope="row">평가항목</th>
-                    <td>출석률 60% 과제 40%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수료기준</th>
-                    <td>총점 80점 이상시 수료</td>
-                    <th scope="row">정원</th>
-                    <td>25 명</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교재정보</th>
-                    <td colspan="3">모바일 웹 UI에 대한 모든 것 (32,000원)</td>
-                  </tr>
-                </table>
-                <button type="button" class="detail__close" title="닫기" aria-label="강좌 상세정보 닫기">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
+            <li class="beverage__item">
+              <a href="#">
+                <figure class="item__container-03">
+                  <figcaption class="item__details-03">
+                    <span lang="en" aria-hidden="true">
+                      spring
+                    </span>
+                    <span lang="en" aria-hidden="true">
+                      peach green tea
+                    </span>
+                    스프링 피치 그린 티
+                  </figcaption>
+                  <img src="./images/Beverage_03.png" alt="">
+                </figure>
+              </a>
             </li>
           </ul>
-          <button type="button" class="multi__btn-prev is-active" title="멀티 캠퍼스 이전 페이지"></button>
-          <button type="button" class="multi__btn-next is-active" title="멀티 캠퍼스 다음 페이지"></button>
-        <div class="multi__pagination-container">
-          <button type="button" class="btn-play" >
-            <svg></svg>
-          </button>
-          <button type="button" class="btn-pause">
-            <svg></svg>
-          </button>
-          <ul class="pagination">
-            <li><a href="#page-1" class="pageno on" data-page-no="1" aria-current="page">1</a></li>
-            <li><a href="#page-2" class="pageno" data-page-no="2">2</a></li>
-            <li><a href="#page-3" class="pageno" data-page-no="3">3</a></li>
-          </ul>
-        </div>
-        </section>
-        <!-- 이듬 블랜디드 러닝 추천 강좌 -->
-        <section class="euid">
-          <h2 class="euid__headline tab"><a href="#" role="button"><em>이듬 블랜디드 러닝</em> 추천 강좌</a></h2>
-          <ul class="euid__list">
-            <!-- UI STRUCTURE & DESIGN COURSE -->
-            <li>
-              <div class="euid__class" aria-labelledby="euid__item1">
-                <h3 id="euid__item1"><em lang="en">UI STRUCTURE &amp; DESIGN COURSE</em> UI 구조 디자인 과정</h3>
-                <a role="button" class="euid__btn-detail" aria-haspopup="dialog">강의 정보</a>
-              </div>
-              <div class="euid__detail" role="dialog" aria-labelledby="euid__detail1">
-                <h3 class="detail__heading" id="euid__detail1"><em lang="en">UI STRUCTURE &amp; DESIGN COURSE</em> UI 구조 디자인 과정</h3>
-                <p>
-                  <svg></svg>
-                  <span class="detail__point">5</span>
-                  <span class="detail__text">점</span>
-                </p>
-                <table class="detail__info-table">
-                  <caption class="a11y-hidden">카페 더블유 추천 강좌 상세 정보</caption>
-                  <tr>
-                    <th scope="row">학습시간</th>
-                    <td>09:00 ~ 18:00 ( 9시간 )</td>
-                    <th scope="row">난이도</th>
-                    <td>초급</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교육비 지원</th>
-                    <td>국비 지원</td>
-                    <th scope="row">평가항목</th>
-                    <td>출석률 100%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수료기준</th>
-                    <td>총점 80점 이상시 수료</td>
-                    <th scope="row">정원</th>
-                    <td>20 명</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교재정보</th>
-                    <td colspan="3">[Beginning] UI Structure (15,000원)</td>
-                  </tr>
-                </table>
-                <button type="button" class="detail__close" title="닫기" aria-label="강좌 상세정보 닫기">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-            </li>
-            <!-- UI INTERACTION & JUNIOR COURSE -->
-            <li>
-              <div class="euid__class" aria-labelledby="euid__item2">
-                <h3 id="euid__item2"><em lang="en">UI INTERACTION &amp; JUNIOR COURSE</em> UI 인터랙션 주니어 과정</h3>
-                <a role="button" class="euid__btn-detail" aria-haspopup="dialog">강의 정보</a>
-              </div>
-              <div class="euid__detail" role="dialog" aria-labelledby="euid__detail2">
-                <h3 class="detail__heading" aria-labelledby="euid__detail2"><em lang="en">UI INTERACTION &amp; JUNIOR COURSE</em> UI 인터랙션 주니어 과정</h3>
-                <p>
-                  <svg></svg>
-                  <span class="detail__point">4</span>
-                  <span class="detail__text">점</span>
-                </p>
-                <table class="detail__info-table">
-                  <caption class="a11y-hidden">카페 더블유 추천 강좌 상세 정보</caption>
-                  <tr>
-                    <th scope="row">학습시간</th>
-                    <td>09:00 ~ 18:00 ( 9시간 )</td>
-                    <th scope="row">난이도</th>
-                    <td>중급</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교육비 지원</th>
-                    <td>국비 지원</td>
-                    <th scope="row">평가항목</th>
-                    <td>출석률 100%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수료기준</th>
-                    <td>총점 90점 이상시 수료</td>
-                    <th scope="row">정원</th>
-                    <td>25 명</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교재정보</th>
-                    <td colspan="3">INTERACTION DESIGN (인터랙션 디자인) (27,000원)</td>
-                  </tr>
-                </table>
-                <button type="button" class="detail__close" title="닫기" aria-label="강좌 상세정보 닫기">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-            </li>
-            <!-- REACT COURSE -->
-            <li>
-              <div class="euid__class" aria-labelledby="euid__item3">
-                <h3 id="euid__item3"><em>REACT COURSE</em> REACT 프로그래밍 과정</h3>
-                <a role="button" class="euid__btn-detail" aria-haspopup="dialog">강의 정보</a>
-              </div>
-              <div class="euid__detail" role="dialog" aria-labelledby="euid__detail3">
-                <h3 class="detail__heading" id="euid__detail3"><em lang="en">REACT COURSE</em> REACT 프로그래밍 과정</h3>
-                <p>
-                  <svg></svg>
-                  <span class="detail__point">5</span>
-                  <span class="detail__text">점</span>
-                </p>
-                <table class="detail__info-table">
-                  <caption class="a11y-hidden">카페 더블유 추천 강좌 상세 정보</caption>
-                  <tr>
-                    <th scope="row">학습시간</th>
-                    <td>10:00 ~ 19:00 ( 9시간 )</td>
-                    <th scope="row">난이도</th>
-                    <td>고급</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교육비 지원</th>
-                    <td>고용보험 비환급</td>
-                    <th scope="row">평가항목</th>
-                    <td>출석률 70% 과제 30%</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수료기준</th>
-                    <td>총점 80점 이상시 수료</td>
-                    <th scope="row">정원</th>
-                    <td>15 명</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">교재정보</th>
-                    <td colspan="3">실전 리액트 프로그래밍 (28,800원)</td>
-                  </tr>
-                </table>
-                <button type="button" class="detail__close" title="닫기" aria-label="강좌 상세정보 닫기">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-            </li>
-          </ul>
-        <button type="button" class="euid__btn-prev" title="이듬 블랜디드 이전 페이지"></button>
-        <button type="button" class="euid__btn-next" title="이듬 블랜디드 다음 페이지"></button>
-        <div class="euid__pagination-container">
-          <button type="button" class="btn-play" >
-            <svg></svg>
-          </button>
-          <button type="button" class="btn-pause">
-            <svg></svg>
-          </button>
-          <ul class="pagination">
-            <li><a href="#page-1" class="pageno on" data-page-no="1" aria-current="page">1</a></li>
-            <li><a href="#page-2" class="pageno" data-page-no="2">2</a></li>
-            <li><a href="#page-3" class="pageno" data-page-no="3">3</a></li>
-          </ul>
-        </div>
-        </section>
-      </section>
-      <!-- section 03 -->
-      <section class="section-container course-container">
-        <h2 class="a11y-hidden">강좌 정보 및 리뷰</h2>
-        <!-- 강좌 리뷰 -->
-        <section class="course-review">
-          <h3 class="a11y-hidden">강좌 리뷰</h3>
-          <ul class="review__list">
-            <li class="review__content">
-              <p class="review__content-head">
-                무엇이 중요한지 알게된 시간!
-              </p>
-              <p class="review__content-text">
-                제가 들었던 해외 튜토리얼에 비해 시맨틱한 마크업과 접근성 비중이 크게 다뤄져 좋았습니다. 많은 튜토리얼들이 디자인을 어떻게 구현하는지에만 초점이 맞춰져 있잖아요. 무엇이 중요한지 알게되어 많은
-                도음이 되었습니다.
-              </p>
-              <p class="review__content-rate">
-                <svg></svg>
-                <span>5점</span>
-                <span>우정민</span>
-              </p>
-            </li>
-            <li class="review__content content-hidden">
-              <p class="review__content-head">웹 개발의 재미를 느낄 수 있었습니다.
-              </p>
-              <p class="review__content-text">
-                기초부터 차근차근 배운 것은 물론 강의를 듣기 전엔 잘 몰랐던 웹접근성까지 자세히 알 수 있었습니다. 프론트엔드 개발 지식과 더불어 향후 어떤 자세를 가진 개발자로 성장해야 할지 고민할 수
-                있었던 소중한 시간이었습니다.
-              </p>
-              <p class="review__content-rate">
-                <svg></svg>
-                <span>5점</span>
-                <span>포피플</span>
-              </p>
-            </li>
-          </ul>
-          <button type="button" class="review__btn-next">다음 페이지</button>
-          <!-- 버튼 재생, 일시정지 버튼 두 개로 할지 하나만 할지 -->
-        </section>
-        <div class="course-box">
-          <!-- 인기 강좌 순위 -->
-          <section class="course-favorite">
-            <h3 class="favorite-heading" id="favoriteHeading">카페 <em>W</em> 인기 강좌</h3>
-            <ol class="favorite-list">
-              <li class="favorite-list__item">
-                <a href="#">UI 구조 &amp; 디자인</a><em class="up">상승</em>
-              </li>
-              <li class="favorite-list__item">
-                <a href="#">모바일 웹 UI 제작 실습</a><em class="new">새 강좌</em>
-              </li>
-              <li class="favorite-list__item">
-                <a href="#">UI 인터랙션 주니어</a><em class="down">하락</em>
-              </li>
-              <li class="favorite-list__item">
-                <a href="#">React 프로그래밍</a><em class="stop">멈춤</em>
-              </li>
-            </ol>
-            <a href="#" class="favorite__more" aria-labelledby="favoriteHeading" title="카페 W 인기 강좌">더보기</a>
-          </section>
-          <!-- 강좌 브로슈어 -->
-          <section class="course-brochure">
-            <h3 class="brochure__download"><a href="#" title="카페 W 브로슈어 다운받기">브로슈어 다운받기</a></h3>
-            <svg></svg>
-          </section>
-        </div>
-      </section>
-      <!-- section 04 -->
-      <section>
-        <h2 class="a11y-hidden">카페 더블유, 유튜브 영상</h2>
-        <figure>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/lmYSIiZFxPI" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <figcaption>스크린리더 사용자를 위한 착한마크업(상품가격 및 할인율)</figcaption>
-        </figure>
-      </section>
-      <!-- section 05 -->
-      <section>
-        <h2>카페 더블유 리저브, 원두소개</h2>
-        <svg>
-          <title>카페 더블유 리저브, 심볼 마크</title>
-        </svg>
-        <p lang="en">
-          CAFE W . RESERVE<em>A DELICATE FRAGRANCE</em>
-        </p>
-        <p>입 안 가득 퍼지는 산뜻하고 따뜻한 봄의 향기</p>
-        <a href="">자세히 보기</a>
-      </section>
-      <!-- section 06 -->
-      <section class="section-container pick-favorite-container">
-        <h2 class="a11y-hidden">카페 더블유의 다양한 상품 안내</h2>
-        <p class="pick-favorite__headline">
-          <span class="headline-01">PICK</span>
-          <span class="headline-02">YOUR</span>
-          <span class="headline-03">FAVORITE</span>
-        </p>
-        <p class="pick-favorite__text">
-          <em>다양한 메뉴를 카페 W에서 즐겨보세요</em>
-          카페 W만의 특별함을 경험할 수 있는 최상의 선택 음료 카페
-          W 커피와 완벽한 어울림을 자랑하는 푸드
-          다양한 시도와 디자인으로 가치를 더하는 상품
-          소중한 사람에게 마음을 전하는 가장 좋은 방법. 카페 W 카드
-        </p>
-        <a href="#" class="pick-favorite__more" title="카페 더블유의 다양한 상품 안내">자세히 보기</a>
-        <ul>
-          <li><svg></svg></li>
-          <li><svg></svg></li>
-          <li><svg></svg></li>
-        </ul>
-      </section>
-      <!-- section 07 -->
-      <section class="section-container lab-container">
-        <h2 class="lab-headline" lang="en">CAFE W COFFEE LAB</h2>
-        <p class="lab-text">최고의 커피를 향한 끊임없는 노력, <em>카페 W 커피연구소</em></p>
-        <ul>
-          <li class="lab-menu"><a href="#" title="랩 메뉴 바로가기">LAB MENU</a></li>
-          <li class="lab-barista"><a href="#" title="랩 바리스타 바로가기">LAB BARISTA</a></li>
-        </ul>
-      </section>
-      <div class="course-box">
-        <!-- 인기 강좌 순위 -->
-        <section class="course-favorite">
-          <h3 class="favorite-heading" id="favoriteHeading">카페 <em>W</em> 인기 강좌</h3>
-          <ol class="favorite-list">
-            <li class="favorite-list__item">
-              <a href="#">UI 구조 &amp; 디자인</a><em class="up">상승</em>
-            </li>
-            <li class="favorite-list__item">
-              <a href="#">모바일 웹 UI 제작 실습</a><em class="new">새 강좌</em>
-            </li>
-            <li class="favorite-list__item">
-              <a href="#">UI 인터랙션 주니어</a><em class="down">하락</em>
-            </li>
-            <li class="favorite-list__item">
-              <a href="#">React 프로그래밍</a><em class="stop">멈춤</em>
-            </li>
-          </ol>
-          <a href="#" class="favorite__more" aria-labelledby="favoriteHeading" title="카페 W 인기 강좌">더보기</a>
-        </section>
-        <!-- 강좌 브로슈어 -->
-        <section class="course-brochure">
-          <h3 class="brochure__download"><a href="#" title="카페 W 브로슈어 다운받기">브로슈어 다운받기</a></h3>
-          <svg></svg>
+          <a href="#" class="season-details more-info" title="시즌음료" aria-labelledby="">자세히보기</a>
         </section>
       </div>
-    </section>
-
-    <!-- section 06 -->
-    <section class="section-container pick-favorite-container">
-      <h2 class="a11y-hidden">카페 더블유의 다양한 상품 안내</h2>
-      <p class="pick-favorite__headline">
-        <span class="headline-01">PICK</span>
-        <span class="headline-02">YOUR</span>
-        <span class="headline-03">FAVORITE</span>
-      </p>
-      <p class="pick-favorite__text">
-        <em>다양한 메뉴를 카페 W에서 즐겨보세요</em>
-        카페 W만의 특별함을 경험할 수 있는 최상의 선택 음료 카페
-        W 커피와 완벽한 어울림을 자랑하는 푸드
-        다양한 시도와 디자인으로 가치를 더하는 상품
-        소중한 사람에게 마음을 전하는 가장 좋은 방법. 카페 W 카드
-      </p>
-      <a href="#" class="pick-favorite__more" title="카페 더블유의 다양한 상품 안내">자세히 보기</a>
-      <ul>
-        <li><svg></svg></li>
-        <li><svg></svg></li>
-        <li><svg></svg></li>
-      </ul>
-    </section>
-    <!-- 우측 이미지 3장은 background 처리 -->
-
-    <!-- section 07 -->
-    <section class="section-container lab-container">
-      <h2 class="lab-headline" lang="en">CAFE W COFFEE LAB</h2>
-      <p class="lab-text">최고의 커피를 향한 끊임없는 노력, <em>카페 W 커피연구소</em></p>
-      <ul>
-        <li class="lab-menu"><a href="#" title="랩 메뉴 바로가기">LAB MENU</a></li>
-        <li class="lab-barista"><a href="#" title="랩 바리스타 바로가기">LAB BARISTA</a></li>
-      </ul>
-    </section>
-    <!-- section 08 -->
-    <div class="visual"></div>
+      <!-- section 04 -->
+      <div class="cafew-video-container">
+        <section class="cafew-youtube">
+          <h2 class="a11y-hidden">카페 더블유, 유튜브 영상</h2>
+          <figure>
+            <iframe src="https://www.youtube.com/embed/lmYSIiZFxPI" aria-labelledby="cafewYoutube" allowfullscreen></iframe>
+            <figcaption class="a11y-hidden" id="cafewYoutube">스크린리더 사용자를 위한 착한마크업(상품가격 및 할인율)</figcaption>
+          </figure>
+        </section>
+      </div>
+      <!-- section 05 -->
+      <div class="cafew-reserve-container">
+        <section class="cafew-reserve">
+          <h2 class="a11y-hidden">카페 더블유 리저브, 원두소개</h2>
+          <svg>
+            <title>카페 더블유 리저브, 심볼 마크</title>
+            <use xlink:href="./images/sprite-sheet.svg#star-symbol-gold" />
+          </svg>
+          <p class="reserve-slogan" lang="en">
+            <span class="slogan__name">CAFE W . RESERVE</span>
+            <em>A DELICATE FRAGRANCE</em>
+            <span class="slogan__ko">입 안 가득 퍼지는 산뜻하고</span>
+            <span class="slogan__ko">따뜻한 봄의 향기</span>
+          </p>
+          <a href="#" class="reserve-details more-info">자세히 보기</a>
+        </section>
+      </div>
       <!-- section 09 -->
-      <section>
-        <h2 class="a11y-hidden">카페 더블유, 매장 찾기</h2>
-        <p>
-          <em>카페 W를 가까이에서 경험해보세요.</em>
-          고객님과 가장 가까이 있는 매장을 찾아보세요!
-        </p>
-        <ul>
-          <li>차별화된 커피 경험을 누릴 수 있는 <em>리저브 매장</em></li>
-          <li>다양한 방법으로 편리하게 즐길 수 있는 <em>드라이브 스루 매장</em></li>
-          <li>함께해서 더 따뜻할수 있는 지역사회 소통 공간 <em>커뮤니티 매장</em></li>
-        </ul>
-        <a href="">매장 찾기</a>
-      </section>
+      <div class="cafew-store-container">
+        <section class="cafew-store">
+          <h2 class="a11y-hidden">카페 더블유, 매장 찾기</h2>
+          <div class="store__txt-container">
+            <p class="store__slogan">
+              <span class="slogan__txt-01">카페 W를 가까이에서 경험해보세요.</span>
+              <span class="slogan__txt-02">고객님과 가장 가까이 있는 매장을 찾아보세요!</span>
+            </p>
+            <ul class="store__list">
+              <li>차별화된 커피 경험을 누릴 수 있는 <b>리저브 매장</b></li>
+              <li>다양한 방법으로 편리하게 즐길 수 있는 <b>드라이브 스루 매장</b></li>
+              <li>함께해서 더 따뜻할수 있는 지역사회 소통 공간 <b>커뮤니티 매장</b></li>
+            </ul>
+            <a href="#" class="store-details more-info">매장 찾기</a>
+          </div>
+        </section>
+    </div>
     </main>
-    <!-- footer -->
-    <footer>
-    </footer>
+    <div class="footer-container">
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer__brand-logo">
+          <svg class="icon">
+            <title>cafe W Logo</title>
+            <use xlink:href="#footer_logo"></use>
+          </svg>
+        </div>
+        <ul class="reset-list site-info">
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">멤버스 이용약관</a></li>
+          <li><a href="#">가맹 안내</a></li>
+          <li><a href="#">대량 쿠폰판매</a></li>
+          <li><a href="#">채용 안내</a></li>
+          <li><a href="#">고객의 소리</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <address class="address">
+          <span>서울시 강남구 테헤란로 10길 18 K&amp;I 타워 카페 W (2F)</span>
+          <span class="divider" aria-hidden="true">ㅣ</span>
+          <span>연락처 : 02-6951-2121</span>
+          <div>
+            <span>사업자 등록번호 : 107-86-16302</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
+            <span>통신판매업 신고 : 강남 제 022519호</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
+            <span>대표이사 : 김데레사</span>
+          </div>
+        </address>
+        <small class="copyright">&copy; 2020 cafe w company.all rights reserved.</small>
+      </footer>
+    </div>
+
+    <!-- 상단 이동 -->
+    <a href="#" class="gototop" aria-label="상단 이동"></a>
+
+    <!-- svg -->
+    <svg width="0" height="0" class="hidden">
+      <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 40" id="logo">
+        <path fill="#FFFCF9" fill-rule="evenodd" d="M39.443 36.446c-2.247 3.657-13.522 3.324-18.188 3.324-4.665 0-14.948 0-18.188-3.324C.216 33.485 0 23.116 0 19.885c0-3.232.216-13.6 3.067-16.519C6.307 0 16.59 0 21.255 0c4.666 0 14.948 0 18.188 3.366 2.852 2.919 3.11 13.287 3.11 16.519 0 3.231-.258 13.6-3.11 16.56zM37.196 5.7c-1.944-2.02-9.806-2.379-15.941-2.379-6.135 0-13.998.359-15.898 2.379-1.513 1.57-2.203 8.842-2.203 14.184 0 5.341.691 12.613 2.203 14.184 1.9 2.019 9.763 2.423 15.898 2.423s13.997-.404 15.941-2.423c1.513-1.571 2.16-8.843 2.16-14.184 0-5.342-.647-12.613-2.16-14.184zm-3.283 18.492H8.597L7.04 11.447l7.734 5.566 6.48-6.777 6.524 6.777 7.733-5.565-1.599 12.747zm-.604 4.983H9.245l-.389-2.783h24.798l-.345 2.783zm-5.79-8.842l-6.264-6.464-6.264 6.464-4.752-3.501.561 4.623h20.91l.604-4.623-4.794 3.5z" clip-rule="evenodd"></path>
+        <path fill="#FFFCF9" d="M49.826 21.348c0 2.953 1.436 4.664 3.92 4.664 1.19 0 2.154-.39 2.842-1.11.509-.538.838-1.226.838-1.718 0-.305-.172-.5-.479-.5-.24 0-.374.125-.53.469-.487 1.226-1.415 1.86-2.634 1.86-1.855 0-2.91-1.321-2.91-3.657V19.55c0-2.328 1.048-3.664 2.888-3.664 1.197 0 2.094.656 2.61 1.89.165.368.322.485.569.485.277 0 .464-.187.464-.515 0-.461-.322-1.165-.83-1.704-.696-.757-1.646-1.148-2.843-1.148-2.469 0-3.905 1.727-3.905 4.664v1.79zm9.343 4.532c.284 0 .456-.141.568-.508l.965-2.954h3.957l.965 2.954c.12.367.284.507.569.507.299 0 .5-.187.5-.476 0-.125-.03-.25-.074-.383l-3.209-9.36c-.15-.414-.359-.617-.726-.617-.374 0-.575.204-.725.618l-3.217 9.359a1.182 1.182 0 00-.067.383c0 .297.195.476.494.476zM61 21.52l1.661-5.055h.045l1.653 5.055H61zm7.938 4.336c.321 0 .53-.235.53-.602V21.02h3.958c.344 0 .56-.188.56-.492 0-.313-.216-.508-.56-.508h-3.957v-3.898h4.353c.344 0 .561-.188.561-.493 0-.312-.217-.508-.56-.508h-4.377c-.733 0-1.024.29-1.024.993v9.14c0 .367.194.602.516.602zm7.173-1.063c0 .704.292.985 1.025.985h4.466c.344 0 .56-.188.56-.492 0-.313-.216-.508-.56-.508h-4.444v-3.953h4.182c.344 0 .56-.188.56-.492 0-.305-.216-.5-.56-.5h-4.182v-3.711h4.451c.344 0 .561-.188.561-.493 0-.312-.217-.508-.561-.508h-4.473c-.733 0-1.025.29-1.025.993v8.68zm12.043-.429c.3 1.117.92 1.484 1.788 1.484.86 0 1.48-.531 1.72-1.484l1.197-4.719h.105l1.174 4.625c.277 1.11.883 1.578 1.818 1.578.882 0 1.436-.484 1.705-1.484l1.87-7.086c.06-.211.105-.586.105-.852 0-.82-.576-1.39-1.406-1.39-.793 0-1.28.523-1.489 1.648l-1.01 5.11h-.142l-1.19-5.172c-.254-1.11-.702-1.586-1.495-1.586-.793 0-1.212.453-1.481 1.586l-1.182 5.171h-.135l-1.084-5.109c-.24-1.148-.689-1.648-1.474-1.648-.845 0-1.421.578-1.421 1.421 0 .258.052.649.157 1.032l1.87 6.875z"></path>
+      </symbol>
+    </svg>
+
+    <svg width="0" height="0" class="hidden">
+      <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Search">
+        <path d="M15.75 0a8.15 8.15 0 015.824 2.426A8.104 8.104 0 0124 8.25a8.15 8.15 0 01-1.125 4.16 8.392 8.392 0 01-2.965 2.965 8.15 8.15 0 01-4.16 1.125 8.135 8.135 0 01-2.813-.492 8.45 8.45 0 01-2.46-1.418l-9.2 9.187A.72.72 0 01.75 24a.72.72 0 01-.527-.223A.72.72 0 010 23.25a.72.72 0 01.223-.527l9.187-9.2a8.445 8.445 0 01-1.418-2.46A8.134 8.134 0 017.5 8.25a8.15 8.15 0 011.125-4.16c.36-.61.79-1.164 1.29-1.664a8.392 8.392 0 011.675-1.301A8.152 8.152 0 0115.75 0zm0 15a6.6 6.6 0 002.625-.527 6.936 6.936 0 002.145-1.454 6.77 6.77 0 001.44-2.144c.36-.82.54-1.695.54-2.625 0-.93-.18-1.805-.54-2.625a6.77 6.77 0 00-1.44-2.145 6.771 6.771 0 00-2.145-1.44 6.47 6.47 0 00-2.625-.54c-.93 0-1.805.18-2.625.54a6.771 6.771 0 00-3.598 3.585A6.593 6.593 0 009 8.25a6.6 6.6 0 00.527 2.625c.36.82.844 1.535 1.454 2.145a6.936 6.936 0 002.144 1.453A6.6 6.6 0 0015.75 15z" fill="#FFFCF9"></path>
+      </symbol>
+    </svg>
+
+    <svg width="0" height="0" class="hidden">
+      <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 90" id="footer_logo">
+        <g opacity=".45" fill="#CFCCC7">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M71.373 63.08c-4.066 6.33-24.469 5.752-32.912 5.752-8.442 0-27.049 0-32.912-5.753C.391 57.954 0 40.01 0 34.416s.39-23.539 5.55-28.59C11.411 0 30.018 0 38.46 0c8.444 0 27.05 0 32.913 5.827C76.532 10.877 77 28.822 77 34.417c0 5.592-.468 23.537-5.627 28.662zM67.307 9.866C63.788 6.37 49.56 5.75 38.46 5.75c-11.1 0-25.329.62-28.768 4.117-2.736 2.718-3.986 15.304-3.986 24.55 0 9.243 1.25 21.83 3.986 24.548 3.44 3.495 17.667 4.194 28.768 4.194 11.1 0 25.327-.7 28.846-4.194 2.736-2.719 3.908-15.305 3.908-24.549.001-9.245-1.172-21.83-3.908-24.549zm-5.941 32.006h-45.81L12.741 19.81l13.994 9.632 11.726-11.73 11.804 11.731 13.994-9.632-2.893 22.061zm-1.094 8.624H16.73l-.704-4.816h44.873l-.626 4.816zM49.797 35.193L38.461 24.006 27.127 35.193l-8.6-6.06 1.016 8.003h37.836l1.094-8.002-8.676 6.06z"></path>
+          <path d="M22.217 84.818c0 .38.053.717.159 1.01.115.282.264.522.446.717.192.185.408.326.648.424.24.098.49.147.75.147.335 0 .623-.028.863-.082.25-.054.47-.13.663-.228.106-.055.22-.12.346-.196a1.21 1.21 0 01.403-.146c.26-.055.494-.033.706.065.21.098.389.282.532.554.183.337.226.674.13 1.01-.086.337-.254.62-.504.848-.403.37-.888.635-1.455.798A5.723 5.723 0 0124.22 90a6.138 6.138 0 01-1.83-.277 4.48 4.48 0 01-1.598-.88 4.677 4.677 0 01-1.123-1.565c-.279-.64-.418-1.412-.418-2.314v-3.39c0-.901.14-1.667.418-2.297.288-.642.662-1.163 1.123-1.565a4.355 4.355 0 011.599-.896 6.138 6.138 0 011.83-.277c.643 0 1.204.076 1.684.228.49.152.874.342 1.153.57.297.24.504.538.619.897a1.33 1.33 0 01-.086 1.043c-.145.282-.337.483-.577.602a1.08 1.08 0 01-.734.098 1.847 1.847 0 01-.447-.146 5.558 5.558 0 00-.345-.196 2.313 2.313 0 00-.548-.163 4.256 4.256 0 00-.72-.049c-.26 0-.509.05-.749.147-.24.098-.456.244-.648.44a2.094 2.094 0 00-.447.717 2.835 2.835 0 00-.158.994v3.097zm9.779-6.927c.144-.456.389-.793.734-1.01a2.05 2.05 0 011.124-.342c.365 0 .715.114 1.051.342.346.228.586.565.72 1.01l3.76 11.832h-3.17l-.56-2.02h-3.703l-.547 2.02h-3.11l3.7-11.832zm.706 7.057h2.203l-1.094-4.058-1.11 4.058zm7.454 4.775V79.18c0-.468.033-.864.1-1.19.077-.326.202-.592.375-.799.173-.206.403-.353.691-.44.288-.097.648-.146 1.08-.146H47.2c.211 0 .389.043.533.13.144.087.264.201.36.342.096.142.163.3.202.473.048.174.072.342.072.505 0 .163-.024.332-.072.505a1.36 1.36 0 01-.202.457 1.03 1.03 0 01-.36.326 1.13 1.13 0 01-.533.114h-3.66c-.163 0-.273.032-.33.098-.059.054-.087.179-.087.374v2.054h3.701c.212 0 .39.043.533.13.144.087.264.201.36.343.096.14.164.298.202.472.048.174.072.342.072.505 0 .163-.024.332-.072.505a1.36 1.36 0 01-.202.457 1.03 1.03 0 01-.36.326 1.13 1.13 0 01-.533.114h-3.701v4.89h-2.967zm12.222-8.051h3.932c.21 0 .389.044.533.13.144.087.264.202.36.343.096.141.163.299.201.473a1.722 1.722 0 010 .977 1.36 1.36 0 01-.201.457c-.087.13-.207.239-.36.326a1.132 1.132 0 01-.533.114h-3.932v1.906c0 .196.028.326.086.392.058.054.168.081.331.081h3.788c.212 0 .39.044.533.13a.859.859 0 01.36.326c.096.13.164.283.202.457a1.723 1.723 0 010 .994 1.348 1.348 0 01-.202.472 1.148 1.148 0 01-.36.343c-.144.087-.321.13-.533.13h-4.911c-.432 0-.792-.043-1.08-.13a1.512 1.512 0 01-.692-.457 1.906 1.906 0 01-.374-.798 5.996 5.996 0 01-.101-1.19v-7.97c0-.466.034-.863.1-1.189.078-.326.202-.592.375-.799.173-.206.404-.353.692-.44.288-.097.648-.146 1.08-.146h4.767c.212 0 .39.043.533.13.144.087.264.201.36.342.096.142.163.3.202.473.048.174.072.342.072.505 0 .163-.024.332-.072.505a1.364 1.364 0 01-.202.457 1.03 1.03 0 01-.36.326 1.13 1.13 0 01-.533.114h-3.644c-.163 0-.273.032-.331.098-.058.054-.086.179-.086.374v1.744z"></path>
+        </g>
+      </symbol>
+    </svg>
   </body>
 </html>
