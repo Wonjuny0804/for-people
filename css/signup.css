@@ -8,7 +8,7 @@
     text-align:center;
     display: block;
     flex-flow: row wrap;
-    background-color: var(--theme-light2);
+    background-color: var(--theme-light5);
     color : var(--theme-main);
     border: 1px solid var(--theme-light);
 }
@@ -42,21 +42,33 @@
     text-align:left;
     font-weight: 1000;
     font-size: 1.3em;
-    height: 25px
+    height: 34px;
+    line-height: 34px;
 }
 /* 필수 입력요소 가상요소 선택자*/
-.member-form label::after{
-    background-color: blue;
-    background: no-repeat url('../css/images/sign-up-sprite.png') 0 0/ 50% 50%;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    right: 0;
+.member-form__id label::after,
+.member-form__pw label::after,
+.member-form__pw-check label::after,
+.member-form__name label::after,
+.member-form__gender .member-form__gender--title::after,
+.member-form__birthday legend::after,
+.member-form__phone label::after,
+.member-form__auth .member-form__auth-title::after{
+    content: "";
+    background-image: url("./images/must.svg");
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: 25% 50%;
+    width: 10px;
+    height:20px;
+    display: inline-block;  
+    top:20;
+    right:0;
 } 
 /* input에 대한 공통 속성 주기 */
 .member-form input {
     width: 100%;
-    height: 30px;
+    height: 34px;
     background-color: transparent;
     border: 1px solid var(--theme-light);
     border-radius: 3px;
@@ -77,13 +89,14 @@
 .member-form__name, 
 .member-form__gender {
     display: inline-block;
-    width: 48%;
+    
 }
 .member-form__name {
     width: 52%
 }
 .member-form__gender {
     float: right;
+    width: 45%;
 }
 .member-form__gender legend {
     display: block;
@@ -100,13 +113,17 @@
     display: flex;
 }
 .gender-options label {
-    width: 15%;
+    width: 20%;
     line-height: 30px;
     font-size: 1.3em;
 }
 .member-form__gender input{
     width: 10vw;
     padding: 0;
+    border: 2px solid var(--theme-bright2);
+}
+.member-form__gender input:hover {
+    background-color: var(--theme-main);
 }
 .member-form span[role="alert"] {
     display: none;
@@ -133,7 +150,7 @@
     font-size: 1.2em;
 }
 .member-form__birthday [name="user_year"]{
-    width :25%
+    width :30%
 }
 .member-form__birthday [name="user_month"]{
     width :15%
@@ -147,6 +164,115 @@
 .form-birthday__addword {
 
     text-align: left;
+}
+/* 인증방식 레이아웃 디자인 */
+.member-form__auth {
+    height: 260px;
+}
+.member-form__auth-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.member-form__auth ul {
+    border: 1px solid var(--theme-light);
+    border-radius: 3px;
+    height: 230px;
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.member-form__auth li {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.member-form__auth li:first-child {
+    border-right: 1px solid var(--theme-light);
+}
+.member-form__auth li:last-child {
+}
+.member-form__auth figure {
+    width: 100%;
+    height: 80%;
+    padding: 10px 20px 0 20px;
+
+}
+.member-form__auth img{
+    height: 45%;
+}
+.member-form__auth figcaption {
+    margin-top: 10px;
+}
+.member-form__auth span {
+    font-weight: 900;
+    margin-bottom: 10px;
+    display: block;
+}
+.member-form__auth a {
+    background: var(--theme-main);
+    color: var(--theme-light5);
+    padding: 5px 25px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.member-form__auth a:hover {
+    background:var(--theme-dark);
+}
+/* 닉네임 */
+.member-form__nickname {
+}
+/*선택적 개인정보 수집동의 및 이용약관*/
+.member-form__privacy-policy {
+    width: 100%;
+    position:relative;
+}
+.member-form__privacy-policy .policy-body {
+    margin-top: 5px;
+    border: 1px solid var(--theme-light3);
+    height: 100px;
+    overflow: auto;
+    font-size: 1.2em;
+    background-color: var(--theme-light3);
+}
+/* 스크롤바 꾸며주기 */
+.member-form__privacy-policy .policy-body::-webkit-scrollbar {
+    border-radius: 2px;
+    width: 4px;
+    background-color: var(--theme-brown);
+}
+.member-form__privacy-policy .policy-body::-webkit-scrollbar-thumb {
+    background-color: var(--theme-main);
+    border-radius: 2px;
+}
+.member-form__privacy-policy input {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    width: 20px;
+}
+/* 선택항목에 대한 문구 꾸미기*/
+.memeber-form__instruction {
+    font-size: 1.2em;
+    font-weight: 400;
+    height: 17px;
+    line-height: 17px;
+}
+/* 회원 가입 버튼*/
+.member-form__button {
+    margin-top: 20px;
+}
+.member-form__button .signup-button {
+    background-color: var(--theme-main);
+    color: var(--theme-light5);
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.6em;
 }
 /* 데스크탑 화면 */
 /* @media all and (min-width:767px) {
