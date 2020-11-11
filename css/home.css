@@ -1,0 +1,338 @@
+/* section_01 */
+.cafew-season-container{
+  width: 100%;
+  background: #F3D6B0;
+}
+.cafew-season{
+  position: relative;
+  padding-bottom: 220px;
+}
+.season__txt{
+  padding-top: 80px;
+  text-align: center;
+  width: 410px;
+}
+
+.season__txt [lang="en"]{
+  letter-spacing: 0.5rem;
+}
+
+.txt__01,
+.txt__02{
+  font-size: 4rem;
+  font-weight: 500;
+  /* 원래 400 */
+  color: #A37356;
+}
+
+.txt__01{
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.txt__02{
+  display: block;
+}
+
+.txt__02::before,
+.txt__02::after{
+  content: "";
+  vertical-align: 9px;
+  display: inline-block;
+  width: 160px;
+  border-bottom: 2px solid #A37356;
+}
+
+.txt__02::before{
+  margin-right: 17px;
+}
+
+.txt__02::after{
+  margin-left: 17px;
+}
+
+.txt__03,
+.txt__04{
+  font-size: 9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 9rem;
+  color: #E27762;
+}
+
+.txt__05{
+  display: block;
+  font-size: 2.6rem;
+  color: #A37356;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.txt__05::after{
+  content: "";
+  display: block;
+  width: 410px;
+  border-bottom: 2px solid #A37356;
+  margin-top: 20px;
+}
+
+.beverage__item figure{
+  position: absolute;
+}
+
+.item__container-01{
+  bottom: 15px;
+  left: 400px;
+  width: 470px;
+}
+
+.item__container-02{
+  top: 60px;
+  right: 400px; 
+  width: 340px;
+}
+
+.item__container-03{
+  width: 300px;
+  bottom: 50px;
+  right: 80px; 
+}
+
+.beverage__item img{
+  width: 283px;
+}
+
+.item__container-03 img{
+  position: relative;
+  right: 70px;
+}
+
+.beverage__item figcaption{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #412311;
+  line-height: 2.8rem;
+  padding: 10px;
+}
+
+.beverage__item span{
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3em;
+}
+
+.beverage__item span:last-child{
+  margin-bottom: 10px;
+}
+
+.season-details{
+  bottom: 145px;
+  left: 140px;
+  color: #E27762;
+}
+
+.season-details:hover,
+.season-details:focus{
+  background-color: #E27762;
+  color: #FFFCF9;
+  border-color: #E27762;
+}
+
+/* section_04 */
+.cafew-video-container{
+  width: 100%;
+  background: #282725;
+}
+
+.cafew-youtube{
+  position: relative;
+}
+
+.cafew-youtube figure{
+  padding: 25px 0;
+  text-align: center;
+}
+
+.cafew-youtube figure::before,
+.cafew-youtube figure::after{
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 122px;
+  background: url(../images/Star_Symbol_youtube.png) no-repeat center;
+  /* opacity: 0.3; */
+  position: absolute;
+  top: 248px;
+}
+
+.cafew-youtube figure::before{
+  left: 85px;
+}
+.cafew-youtube figure::after{
+  right: 85px;
+}
+
+.cafew-youtube iframe{
+  width: 960px;
+  height: 540px;
+}
+
+/* section_05 */
+.cafew-reserve-container{
+  width: 100%;
+  background: url(../images/bg-woman.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  height: 458px;
+  color: #A37356;
+}
+
+.cafew-reserve{
+  position: relative;
+}
+
+.cafew-reserve svg{
+  position: absolute;
+  top: 124px;
+  left: 120px;
+  width: 75px;
+  height: 95px;
+}
+
+.cafew-reserve .reserve-slogan{
+  position: absolute;
+  top: 90px;
+  left: 224px;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+}
+
+.reserve-slogan span, 
+.reserve-slogan em{
+  display: block;
+}
+
+.reserve-slogan em{
+  font-size: 2.5rem;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.reserve-slogan .slogan__name{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.slogan__ko{
+  letter-spacing: 0;
+}
+
+.reserve-details{
+  color: currentColor;
+  top:217px;
+  left:224px;
+  margin-top: 20px;
+}
+
+.reserve-details:hover{
+  background: #A37356;
+  color: #FFFCF9;
+  border: 1px solid #A37356;
+}
+
+/* section_09 */
+.cafew-store-container{
+  width: 100%;
+  background: #000 radial-gradient(65.6% 264.49% at 59.55% 37.62%, rgba(40, 39, 37, 0.95) 0%, #282725 73.46%, #171615 100%);
+}
+
+.cafew-store{
+  position: relative;
+  height: 420px;
+  color: #FFFCF9;
+}
+
+.store__txt-container{
+  position: absolute;
+  top: 80px;
+  right: 267px;
+}
+
+.cafew-store .store__slogan em{
+  font-style: normal;
+  display: block;
+}
+
+.store__slogan{
+  margin-bottom: 15px;
+}
+
+.store__slogan .slogan__txt-01{
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.6em;
+}
+
+.store__slogan .slogan__txt-02{
+  display: block;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.store__list{
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 35px;
+}
+
+.store__list b{
+  font-weight: bold;
+}
+
+.store-details{
+  color: currentColor;
+  padding: 7px 20px;
+}
+
+.store-details:hover{
+  background: #FFFCF9;
+  color: #282725;
+}
+
+.cafew-store::before,
+.cafew-store::after{
+  content: "";
+  display: inline-block;
+  border-radius: 100%;
+  position: absolute;
+  filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.6));
+}
+
+.cafew-store::before{
+  width: 360px;
+  height: 360px;
+  background: url(../images/muffin.png) no-repeat 50% 50%;
+  background-size: cover;
+  left: 174px;
+  top: -50px;
+}
+.cafew-store::after{
+  width: 220px;
+  height: 220px;
+  background: url(../images/cup_woman.png) no-repeat 50% 50%;
+  left: 440px;
+  top: 140px;
+}
+
+.store__list::after{
+  content: "";
+  display: inline-block;
+  width: 152px;
+  height: 127px;
+  position: absolute;
+  top: 213px;
+  right: 90px;
+  background: url(../images/Coffee_Store.png) no-repeat;
+}
