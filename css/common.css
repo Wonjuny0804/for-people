@@ -1,0 +1,248 @@
+/* 스킵 네비게이션 */
+.skip-nav{
+  display: none;
+}
+
+/* 레이아웃 */
+body{
+  padding-top: 145px;
+}
+
+.header, 
+.cafew-season,
+.cafew-youtube,
+.cafew-reserve,
+.cafew-store{
+  width: 1420px;
+  margin: 0 auto;
+}
+
+.header-container{
+  position: relative;
+  background: #282725;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-container::before{
+  content: "";
+  position: absolute;
+  top: 82px;
+  left: 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.header{
+  color: #FFFCF9;
+  padding-top: 18px;
+}
+
+.header a{
+  color: inherit; /* reset */
+}
+
+/* 헤더 로고 */
+.header__headline a{
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+.header__headline svg{
+  width: 100%;
+  height: 100%;
+}
+
+/* 헤더 - 탑메뉴 */
+.header__top-menu{
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.header__list{
+  order: -1;
+  line-height: 3;
+}
+
+.header__list li{
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.header__list a:hover{
+  text-decoration: underline;
+}
+
+/* 헤더 - 검색폼 */
+.header__search fieldset{
+  width: 242px;
+  justify-content: center;
+}
+
+.search__form{
+  padding: 0 10px;
+  border-bottom: 1px solid #FFFCF9;
+  background: transparent;
+  /* background: pink; */
+  margin-right: 8px;
+  color: #FFFCF9;
+}
+
+.search__btn{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.search__btn svg{
+  width: 100%;
+  height: 100%;
+}
+
+/* 헤더 - 네비게이션 */
+.nav__list {
+  width: 284px;
+  margin-left: 10px;
+}
+
+.nav__headline{
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.nav__headline a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav__items{
+  display: none;
+  margin-bottom: 30px;
+}
+.nav__menu:hover .nav__items{
+  display: block;
+}
+
+.nav__list:focus .nav__items{
+  display: block;
+}
+
+.nav__list:hover .nav__headline,
+.nav__list:focus .nav__headline{
+  color: #7D6F5D;
+  text-decoration: underline;
+}
+
+.nav__items li:hover,
+.nav__items li:focus{
+  text-decoration: underline;
+}
+
+.nav__items li{
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+/* footer */
+.footer-container{
+  position: relative;
+  width: 100%;
+  background: #282725;
+  border-top: 1px solid rgba(255, 252, 249, 0.2);
+}
+.footer {
+  position: relative;
+  width: 1420px;
+  margin: 0 auto;
+  color: rgba(255, 252, 249, 0.6);
+}
+.footer-container::after{
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 252, 249, 0.2);
+  position: absolute;
+  top: 75px;
+  left: 0;
+}
+
+/* 푸터 로고 */
+.footer__brand-logo {
+  position: absolute;
+  width: 77px;
+  height: 90px;
+  top: 122px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer__brand-logo svg{
+  width: 100px;
+  height: 100%;
+}
+
+/* 푸터 인포 */
+.site-info {
+  padding: 30px 180px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.site-info li {
+  font-size: 16px;
+  font-weight: 700;
+}
+.site-info a:hover {
+  color: var(--theme-light3);
+  opacity: 1;
+}
+
+/* 푸터 주소 */
+.address {
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 170px;
+  line-height: 1.5;
+}
+
+/* 카피라이터 */
+.copyright {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-top: 30px;
+  padding-bottom: 60px;
+  text-transform: uppercase;
+  text-align: center;
+}
+*
+/* 상단 이동 */
+.gototop {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background: var(--theme-point);
+  border-radius: 50%;
+}
+.gototop::before {
+  content: "";
+  background: url(./images/Up_Arrow-button.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
