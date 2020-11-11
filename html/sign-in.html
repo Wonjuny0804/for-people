@@ -17,13 +17,14 @@
   <div class="skip-nav"><a href="#content">본문 바로가기</a></div>
   <!-- 로그인 메인 섹션 -->
   <main class="main-container" id="content">
+    <div class="bg">
     <!-- 로그인 입력 서식 영역 -->
     <section class="sign-in">
       <h2 class="sign-in__headline">sign in</h2>
       <p class="sign-in__intro">환영합니다. 이 곳은 CAFE W 입니다.</p>
       <form action="#" method="POST">
         <fieldset>
-          <legend>로그인 폼</legend>
+          <legend class="a11y-hidden">로그인 폼</legend>
           <div class="sign-in__form">
             <!-- 아이디 및 비밀번호 입력창 -->
             <div class="member-id is--invalid">
@@ -45,11 +46,16 @@
                 <span class="sign-in__checkbox" aria-hidden="true"></span>
                 <label for="userIdSave">아이디 저장</label>
               </div>
-              <div class="keep-sign-in">
+              <label for="keepSignIn" class="keep-sign-in">
+                <input type="checkbox" id="keepSignIn" />
+                <span class="sign-in__checkbox"></span>
+                로그인 상태 유지
+              </label>
+              <!-- <div class="keep-sign-in">
                 <input type="checkbox" id="keepSignIn" />
                 <span class="sign-in__checkbox" aria-hidden="true"></span>
                 <label for="keepSignIn">로그인 상태 유지</label>
-              </div>
+              </div> -->
             </div>
             <!-- 로그인 인포메이션 -->
             <div class="sign-in__info">
@@ -73,6 +79,7 @@
         </fieldset>
       </form>
     </section>
+  </div>
   </main>
   <!-- 공통 푸터 -->
   <footer class="footer">
@@ -83,7 +90,7 @@
       </svg>
     </div>
     <!-- 사이트 내 정보 -->
-    <ul class="site-info reset-list">
+    <ul class="reset-list site-info">
       <li><a href="#">개인정보 처리방침</a></li>
       <li><a href="#">멤버스 이용약관</a></li>
       <li><a href="#">가맹 안내</a></li>
@@ -108,10 +115,10 @@
     <small class="copyright">&copy; 2020 cafe w company.all rights reserved.</small>
   </footer>
   <!-- 상단 이동 -->
-  <a href="#" class="gototop">gototop
-    <svg>
+  <a href="#" class="gototop" aria-label="상단 이동">
+    <!-- <svg>
       <title>페이지 상단 이동</title>
-    </svg>
+    </svg> -->
   </a>
   <!-- 화살표 이미지 svg로 삽입할 경우에는 '페이지 상단 이동'을 svg 태그 내 title요소에 작성 -->
 </body>
