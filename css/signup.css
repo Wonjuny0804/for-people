@@ -11,6 +11,12 @@
     background-color: var(--theme-light5);
     color : var(--theme-main);
     border: 1px solid var(--theme-light);
+    background: no-repeat url('./images/Barista-Girl.svg') 50% 12%;
+}
+.member::after {
+    background: url('./images/Barista.svg');
+    width: 100px;
+    height: 100px;
 }
 /* 헤드라인과 인트로 글귀 디자인*/
  .member__headline {
@@ -75,7 +81,10 @@
 }
 .member-form__id {
     margin-top: 100px;
-} 
+    position: relative;
+}
+.member-form__id p {
+}
 /*
 .member-form__id label,
 .member-form__pw label,
@@ -107,24 +116,40 @@
     font-weight: 1000;
     margin-top: 2px;
     margin-bottom: 10px;
-
 }
 .gender-options {
     display: flex;
+    position: relative;
+    justify-content: space-between;
+    vertical-align: baseline;
+}
+.member-form__gender input{
+    position:relative;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    z-index: 10;
+}
+
+.member-form__gender input::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    background: no-repeat url('./images/radio-off.svg') 0 0;
+    width: 33px;
+    height: 33px;
+    transform: scale(1.7);
+}
+.member-form__gender input:checked::before {
+    background: no-repeat url('./images/radio-on.svg');
 }
 .gender-options label {
     width: 20%;
-    line-height: 30px;
     font-size: 1.3em;
 }
-.member-form__gender input{
-    width: 10vw;
-    padding: 0;
-    border: 2px solid var(--theme-bright2);
-}
-.member-form__gender input:hover {
-    background-color: var(--theme-main);
-}
+
 .member-form span[role="alert"] {
     display: none;
 } 
@@ -148,6 +173,11 @@
     background-color: transparent;
     border-radius: 3px;
     font-size: 1.2em;
+    color: var(--theme-main);
+    padding-left: 10px;
+    -webkit-appearance: none; 
+    background: url(./images/Down-Arrow.svg) no-repeat 95% 50%;
+
 }
 .member-form__birthday [name="user_year"]{
     width :30%
@@ -158,8 +188,14 @@
 .member-form__birthday [name="user_date"]{
     width :15%
 }
+.member-form__birthday [name="user_metonic"]{
+    width :15%
+}
 .form-birthday__addword::before {
-    background: no-repeat url(./images/sign-up-sprite.png);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: pink no-repeat url(./images/Star.svg) 0 0;
 }
 .form-birthday__addword {
 
@@ -249,12 +285,6 @@
     background-color: var(--theme-main);
     border-radius: 2px;
 }
-.member-form__privacy-policy input {
-    position: absolute;
-    top: -2px;
-    right: 10px;
-    width: 20px;
-}
 /* 선택항목에 대한 문구 꾸미기*/
 .member-form__instruction {
     font-size: 1.2rem;
@@ -262,12 +292,58 @@
     height: 17px;
     line-height: 17px;
 }
+/* 현재 안먹고 있음. */
 .member-form__instruction::before {
     content: " ";
     /* background-image: url('./images/Star.svg'); */
     background-color: red;
     width: 17px;
     height: 17px;
+}
+/* 동의 박스*/
+.member-form__privacy-policy input {
+    width: 33px;    
+    transform: scale(1.5, 1.5);
+    outline: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    opacity: 0;
+}
+.privacy-checkbox {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 15px;
+    top: 10px;
+    right: 0px;
+    border-radius: 15px;
+    background: #CFCCC7;
+    transition: all 0.2s;
+}
+.privacy-checkbox::before {
+    content: "";
+    position: absolute;
+    background: #CFCCC7;
+    left: -1px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    z-index: 2;
+    transition: all 0.2s;
+}
+.member-form__privacy-policy input:checked + span {
+    background: var(--theme-main);
+    opacity: 0.6;
+}
+.member-form__privacy-policy input:checked + span::before {
+    transform: translateX(23px);
+    background: var(--theme-main);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    opacity: 1;
 }
 /* 회원 가입 버튼*/
 .member-form__button {
@@ -286,13 +362,25 @@
 @media all and (min-width: 767px) {
     .member {
         width: 742px;
-        margin: auto;
+        margin: 0 auto;
         margin-top: 104px;
         border-radius: 3px;
     }
     .member-form {
         width: 438px;
         margin: auto;
+    }
+    /* 수직 간격 디자인 */
+    .member-form__id,
+    .member-form__pw,
+    .member-form__pw-check,
+    .member-form__name,
+    .member-form__birthday,
+    .member-form__phone,
+    .member-form__nickname,
+    .member-form__privacy-policy,
+    .member-form__auth {
+        margin-bottom: 20px;
     }
     /* 헤드라인 디자인 */
     .member__headline {
@@ -307,26 +395,17 @@
     .member-form__id {
         margin-top: 147px;
     }
-    /* 수직 간격 디자인 */
-    .member-form__id,
-    .member-form__pw,
-    .member-form__pw-check,
-    .member-form__name,
-    .member-form__birthday,
-    .member-form__phone,
-    .member-form__nickname,
-    .member-form__privacy-policy,
-    .member-form__auth {
-        margin-bottom: 20px;
+    /* 성별 섹션 디자인 */
+    .member-form__gender {
+        padding-left: 23px; 
     }
-    /* 인증방식 디자인 */
-    .member-form__auth {
-
+    .member-form__gender input {
+    }
+    .member-form__gender label {
+        margin-right: 5px;
+        line-height: 33px;
     }
     /* 선택적 개인정보 동의 디자인 */
-    .member-form__privacy-policy {
-        /* height: 169px; */
-    }
     .member-form__privacy-policy .policy-body {
         border: 1px solid var(--theme-light);
         height: 169px;

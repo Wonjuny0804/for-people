@@ -22,6 +22,7 @@
                     <label for="userEmail" class="necessary">아이디</label>
                     <input type="email" id="userEmail" name="userEmail" required="true"
                     aria-invalid="false" aria-describedby="emailErrorFeedback"/>
+                    <p>등록할 사용자 계정을 입력합니다. (예: seulbinim@gmail.com)</p>
                     <!-- placeholder -->
                     <span role="alert" id="emailErrorFeedback">이메일 서식이 잘못되었습니다. (예: seulbinim@gmail.com)</span>
                </div>
@@ -53,8 +54,10 @@
                     <p class="member-form__gender--title necessary">성별</p>
                     <div class="gender-options">
                       <input type="radio" id="female" name="gender" value="female"/>
+                      <span class="checkbox"></span>
                       <label for="female">여성</label>
                       <input type="radio" id="male" name="gender" value="male">
+                      <span class="checkbox"></span>
                       <label for="male">남성</label>
                     </div>
               </div>
@@ -262,7 +265,7 @@
                         <span>3. 서비스 이용과정 및 사업 처리과정에서 수집될 수 있는 개인정보의 범위 서비스 이용기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록 * 쿠키의 경우
                         구체적인 운영 내역과 설정 거부 방법 등은 본 홈페이지 개인정보처리방침 “개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항”에서 확인하실 수 있습니다.</span></p>
                    <input type="checkbox" id="policyAgree" name="policyAgree">
-                   <span></span>
+                   <span class="privacy-checkbox"></span>
                </div>
                <p class="member-form__instruction">선택항목은 입력하지 않거나 동의하지 않아도 회원 가입이 가능합니다.</p>
                <!-- 회원가입 폼 제출 버튼-->
