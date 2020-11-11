@@ -7,6 +7,90 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <div class="header-container">
+    <!-- skip-nav -->
+    <div class="skip-nav">
+      <a href="#Navigation">메뉴 바로가기</a>
+      <a href="#">매장 찾기</a>
+    </div>
+    <!-- header -->
+    <header class="header">
+      <div class="header__top-menu flex-default">
+        <h1 class="header__headline">
+          <a href="#">
+            <svg><use xlink:href="#logo"></use></svg>
+          </a>
+          <span class="a11y-hidden">CAFE W</span>
+        </h1>
+        <ul class="header__list">
+          <li>
+            <a href="#">Sign In</a>
+          </li>
+          <li>
+            <a href="#">Sign Up</a>
+          </li>
+        </ul>
+        <form action="" method="get" class="header__search">
+          <h2 class="a11y-hidden">검색</h2>
+          <fieldset class="flex-default">
+            <legend class="a11y-hidden">검색폼</legend>
+            <label for="searchForm" class="a11y-hidden">자료검색</label>
+            <input type="text" id="searchForm" class="search__form" name="search" required />
+            <a href="#" class="search__btn" title="검색">
+              <svg class="icon">
+                <use xlink:href="#Search"></use>
+              </svg>
+            </a>
+          </fieldset>
+        </form>
+      </div>
+      <nav class="navigation" id="Navigation">
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="nav__menu flex-default">
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Drinks</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">콜드 브루</a></li>
+              <li><a href="#">에스프레소</a></li>
+              <li><a href="#">기타 제조 음료</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Foods</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">베이커리</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">샌드위치 & 샐러드</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Products</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">머그</a></li>
+              <li><a href="#">텀블러</a></li>
+              <li><a href="#">커피용품</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Lectures</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">UI 구조 & 디자인</a></li>
+              <li><a href="#">UI 인터렉션 주니어</a></li>
+              <li><a href="#">리액트 프로그래밍</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Customer Service</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">추천 채널</a></li>
+              <li><a href="#">체크 리스트</a></li> 
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
     <!-- 회원가입 시트 작성 -->
    <section class="member sign-up">
        <!-- 회원가입 헤드라인 -->
@@ -21,7 +105,7 @@
                <div class="member-form__id is--invalid">
                     <label for="userEmail" class="necessary">아이디</label>
                     <input type="email" id="userEmail" name="userEmail" required="true"
-                    aria-invalid="fa    lse" aria-describedby="emailErrorFeedback" placeholder="등록할 사용자 계정을 입력합니다. (예: seulbinim@gmail.com)"/>
+                    aria-invalid="false" aria-describedby="emailErrorFeedback" placeholder="등록할 사용자 계정을 입력합니다. (예: seulbinim@gmail.com)"/>
                     <!-- placeholder -->
                     <span role="alert" id="emailErrorFeedback">이메일 서식이 잘못되었습니다. (예: seulbinim@gmail.com)</span>
                </div>

@@ -1,9 +1,4 @@
-
-/* 전체 레이아웃 설정*/
-.body {
-    min-width: 760px;
-    font-size: 16px;
-}
+/* 전체 레이아웃 설정*/ 
 .member {
     text-align:left;
     display: block;
@@ -157,8 +152,7 @@
     width: 33px;
     height: 33px;
     padding: 0;
-    z-index: 10;
-}
+}   
 .member-form__gender input::before {
     content: "";
     display: block;
@@ -387,7 +381,7 @@ button[disabled]:hover {
     .member {
         width: 742px;
         margin: 0 auto;
-        margin-top: 104px;
+        margin-top: 200px;
         border-radius: 3px;
     }
     .member-form {
