@@ -1,4 +1,4 @@
-@import url('./style.css');
+
 /* 전체 레이아웃 설정*/
 .body {
     min-width: 760px;
@@ -8,9 +8,9 @@
     text-align:left;
     display: block;
     flex-flow: row wrap;
-    background-color: var(--theme-light5);
-    color : var(--theme-main);
-    border: 1px solid var(--theme-light);
+    background-color: #ffff;
+    color : #7D6F5D;
+    border: 1px solid #cbc5be;
     background: url('./images/Barista-Girl.svg') 50% 12%, url('./images/Barista.svg') 100% 100% / 20% 20%;
     background-repeat: no-repeat;
 }
@@ -18,9 +18,9 @@
 .member-form input {
     outline: none;
     width: 100%;
-    height: 34px;
+    height: 34px;   
     background-color: transparent;
-    border: 1px solid var(--theme-light);
+    border: 1px solid #cbc5be;
     border-radius: 3px;
     padding: 5px;
     font-size: 1.3rem;
@@ -40,13 +40,13 @@
     text-transform: uppercase;
     margin-top: 30px;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2rem;
 }
 .member__intro {
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--theme-light);
-    font-size: 1em;
+    border-bottom: 1px solid #cbc5be;
+    font-size: 1rem;
     font-weight: 540;
     margin-top: 5px;
     padding-bottom: 30px;
@@ -60,7 +60,7 @@
 .is--invalid [role="alert"] {
   display: inline-block;
   font-size: 1.1rem;
-  color: var(--theme-point);
+  color: #e27762;
   text-align: left;
   height: 18px;
   line-height: 18px;
@@ -87,7 +87,7 @@
 
 /* 필드셋 안에 있는 요소들 레이아웃*/
 .member-form fieldset {
-    padding: 2vw;
+    /*padding: 2vw;*/   
 }
 /* input공통 영역 제어 코드 */
  .member-form label {
@@ -95,8 +95,8 @@
     display: block;
     width: 100%;
     text-align:left;
-    font-weight: 1000;
-    font-size: 1.3em;
+    font-weight: 700;
+    font-size: 1.3rem;
     height: 34px;
     line-height: 34px;
 }
@@ -175,7 +175,7 @@
 }
 .gender-options label {
     width: 20%;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 /* 생년월일 레이아웃과 디자인*/
 .member-form__birthday fieldset {
@@ -185,7 +185,7 @@
     margin-bottom: 5px;
 }
 .member-form__birthday legend {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     text-align: left;
     font-weight: 1000;
     margin-bottom: 10px;
@@ -193,11 +193,11 @@
 .member-form__birthday select {
     height: 30px;
     margin-right: 5px;
-    border: solid 1px var(--theme-light);
+    border: solid 1px #cbc5be;
     background-color: transparent;
     border-radius: 3px;
-    font-size: 1.2em;
-    color: var(--theme-main);
+    font-size: 1.2rem;
+    color: #7D6F5D;
     padding-left: 10px;
     -webkit-appearance: none;
     background: url(./images/Down-Arrow.svg) no-repeat 95% 50%;
@@ -231,11 +231,11 @@
 .member-form__auth-title {
     text-align: left;
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 .member-form__auth ul {
-    border: 1px solid var(--theme-light);
+    border: 1px solid #cbc5be;
     border-radius: 3px;
     height: 230px;
     padding: 10px 0;
@@ -248,7 +248,7 @@
     height: 100%;
 }
 .member-form__auth li:first-child {
-    border-right: 1px solid var(--theme-light);
+    border-right: 1px solid #cbc5be;
 }
 .member-form__auth figure {
     width: 100%;
@@ -271,15 +271,15 @@
     display: block;
 }
 .member-form__auth a {
-    background: var(--theme-main);
-    color: var(--theme-light5);
+    background: #7D6F5D;
+    color: #ffff;
     padding: 7px 25px;
     border-radius: 3px;
     font-weight: 500;
     font-size: 1.2rem;
 }
 .member-form__auth a:hover {
-    background:var(--theme-dark);
+    background:#282725;
 }
 /*선택적 개인정보 수집동의 및 이용약관*/
 .member-form__privacy-policy {
@@ -288,20 +288,20 @@
 }
 .member-form__privacy-policy .policy-body {
     margin-top: 5px;
-    border: 1px solid var(--theme-light3);
+    border: 1px solid #fffcf9;
     height: 100px;
     overflow: auto;
-    font-size: 1.2em;
-    background-color: var(--theme-light3);
+    font-size: 1.2rem;
+    background-color: #fffcf9;
 }
 /* 스크롤바 꾸며주기 */
 .member-form__privacy-policy .policy-body::-webkit-scrollbar {
     border-radius: 2px;
     width: 4px;
-    background-color: var(--theme-brown);
+    background-color: #cfccc7;
 }
 .member-form__privacy-policy .policy-body::-webkit-scrollbar-thumb {
-    background-color: var(--theme-main);
+    background-color: #7D6F5D;
     border-radius: 2px;
 }
 /* 선택항목에 대한 문구 꾸미기*/
@@ -355,12 +355,12 @@
     transition: all 0.2s;
 }
 .member-form__privacy-policy input:checked + span {
-    background: var(--theme-main);
+    background: #7D6F5D;
     opacity: 0.6;
 }
 .member-form__privacy-policy input:checked + span::before {
     transform: translateX(23px);
-    background: var(--theme-main);
+    background: #7D6F5D;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
     opacity: 1;
 }
@@ -369,13 +369,13 @@
     margin-top: 20px;
 }
 .member-form__button .signup-button {
-    background-color: var(--theme-main);
-    color: var(--theme-light5);
+    background-color: #7D6F5D;
+    color: #ffff;
     width: 100%;
     height: 30px;
     border-radius: 3px;
     font-weight: 700;
-    font-size: 1.6em;
+    font-size: 1.6rem;
 }
 button[disabled]:hover {
     background-color: #CBC5BE;
@@ -429,7 +429,7 @@ button[disabled]:hover {
     }
     /* 선택적 개인정보 동의 디자인 */
     .member-form__privacy-policy .policy-body {
-        border: 1px solid var(--theme-light);
+        border: 1px solid #cbc5be;
         height: 169px;
     }
     /* 선택적 개인정보 내용 디자인 */
