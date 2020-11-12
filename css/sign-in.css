@@ -24,7 +24,7 @@ a {
 }
 /* 로그인 메인 컨테이너 */
 .main-container {
-  background: var(--theme-dark) url(./images/coffee-background.png) no-repeat 0 0 / 100% 100%;
+  background: url(../images/coffee-background.png) no-repeat 0 0 / 100% 100%;
   position: relative;
 }
 .main-container::before,
@@ -33,16 +33,16 @@ a {
   position: absolute;
   width: 70px;
   height: 95px;
-  background: url(./images/StarSymbol.svg) no-repeat 0 0;
+  background: url(../images/StarSymbol2.svg) no-repeat 0 0;
 }
 .main-container::before {
   top: 360px;
-  left: 15%;
+  left: 10%;
   z-index: 1;
 }
 .main-container::after {
   top: 360px;
-  right: 15%;
+  right: 10%;
 }
 /* 메인 섹션 이미지 블러처리 */
 .bg {
@@ -70,7 +70,7 @@ a {
 } */
 /* 로그인 섹션 */
 .sign-in {
-  background-color: var(--theme-light3);
+  background-color: #FFFCF9;
   width: 742px;
   height: 614px;
   margin: 100px auto;
@@ -85,7 +85,7 @@ a {
   content: "";
   width: 169px;
   height: 420px;
-  background: url(./images/Group.svg) no-repeat 100% 0 / 90% 90%;
+  background: url(../images/bg_man.svg) no-repeat 100% 0 / 90% 90%;
   opacity: 0.3;
   position: absolute;
   top: 275px;
@@ -96,14 +96,14 @@ a {
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 700;
-  color: var(--theme-main);
+  color: #7D6F5D;
   margin: 0;
   padding-top: 25px;
   text-align: center;
 }
 .sign-in__intro {
   font-size: 16px;
-  color: var(--theme-main);
+  color: #7D6F5D;
   margin-top: 0;
   margin-bottom: 25px;
   text-align: center;
@@ -127,7 +127,7 @@ a {
   display: block;
   font-size: 14px;
   font-weight: 700;
-  color: var(--theme-main);
+  color: #7D6F5D;
 }
 .member-id input, .member-pw input {
   width: 430px;
@@ -140,18 +140,13 @@ a {
   border-radius: 3px;
   background-color: transparent;
 }
-.placeholder {
-  position: absolute;
-  top: 35px;
-  left: 0.7em;
-  font-size: 13px;
-  color: var(--theme-main);
-  opacity: 0.7;
-}
 .member-id input:focus,
 .member-pw input:focus {
-  border: 1px solid var(--theme-main);
-  
+  outline: none;
+  border: 1px solid #7D6F5D;
+}
+.is-invalid-input input:focus {
+  border: 1px solid #E26E6B;
 }
 .member-pw {
   margin-top: 20px;
@@ -167,20 +162,28 @@ a {
 }
 
 /* 아이디 및 패스워드 폼 상태 디자인 */
-.is--invalid [role="alert"] {
+.is-invalid [role="alert"] {
   display: inline-block;
 }
-.is--invalid input {
-  border: 1px solid var(--theme-point);
-  color: var(--theme-point);
+.is-invalid input {
+  outline: none;
+  border: 1px solid #E26E6B;
+  color: #E26E6B;
 }
-
-
+.is-invalid-input::after {
+  content: "";
+  background: url(../images/error-icon.svg) no-repeat 0 0;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
 /* 아이디 및 패스워드 에러 메세지 */
 .member-id [role="alert"],
 .member-pw [role="alert"] {
   font-size: 11px;
-  color: var(--theme-point);
+  color: #E26E6B;
   position: absolute;
   height: 18px;
   line-height: 18px;
@@ -244,18 +247,18 @@ a {
 }
 .save-id input:checked + span,
 .keep-sign-in input:checked + span {
-  background: var(--theme-main);
+  background: #7D6F5D;
   opacity: 0.6;
 }
 .save-id input:checked + span::before,
 .keep-sign-in input:checked + span:before {
   transform: translateX(23px);
-  background: var(--theme-main);
+  background: #7D6F5D;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
   opacity: 1;
 }
 .save-and-keep label {
-  color: var(--theme-main);
+  color: #7D6F5D;
   font-size: 14px;
   cursor: pointer;
   /* display: inline-block; */
@@ -287,7 +290,7 @@ a {
 .sign-in__info p {
   font-size: 12px; 
   padding-left: 10px;
-  color: var(--theme-main);
+  color: #7D6F5D;
   line-height: 1.5;
   margin: 0;
   margin-top: 7px;
@@ -295,7 +298,7 @@ a {
 }
 .sign-in__info p::before {
   content: "";
-  background: url(./images/Star.svg) no-repeat 0 0;
+  background: url(../images/Star.svg) no-repeat 0 0;
   width: 10px;
   height: 10px;
   position: absolute;
@@ -314,24 +317,28 @@ a {
   width: 100%;
   height: 46px;
   border: 0;
-  background-color: var(--theme-main);
+  background-color: #7D6F5D;
   border-radius: 3px;
   font-size: 16px;
   font-weight: 700;
-  color: var(--theme-light3);
+  color: #FFFCF9;
 }
 .btn-sign-in:hover {
-  background-color: var(--theme-dark);
+  background-color: #282725;
   cursor: pointer;
 }
-
 .sign-in__request [role="alert"] {
   font-size: 12px;
   font-weight: 700;
-  color: var(--theme-point);
+  color: #E27762;
   position: absolute;
   top: -22px;
   left: 45px;
+}
+.is-invalid button:hover {
+  background-color: #CFCCC7;
+  color: #7D6F5D;
+  cursor: not-allowed;
 }
 /* 회원가입 등 계정 서비스 영역 */
 .account-service {
@@ -344,7 +351,7 @@ a {
 }
 .account-service li{
   display: inline-block;
-  color: var(--theme-main);
+  color: #7D6F5D;
   opacity: 0.7;
 }
 .account-service a {
@@ -355,7 +362,7 @@ a {
   font-weight: 700;
 }
 .account-service a:hover {
-  color: var(--theme-dark);
+  color: #282725;
   opacity: 1;
 }
 .account-service .divider {
@@ -365,11 +372,11 @@ a {
 .footer-container{
   position: relative;
   width: 100%;
-  background: var(--theme-dark);
+  background: #282725;
 }
 .footer {
   position: relative;
-  width: 1420px;
+  width: 1440px;
   margin: 0 auto;
   color: rgba(255, 252, 249, 0.6);
 }
@@ -410,7 +417,7 @@ a {
   font-weight: 700;
 }
 .site-info a:hover {
-  color: var(--theme-light3);
+  color: #FFFCF9;
   opacity: 1;
 }
 
@@ -439,16 +446,12 @@ a {
   right: 50px;
   width: 60px;
   height: 60px;
-  background: var(--theme-point);
+  background: #E27762;
   border-radius: 50%;
 }
 .gototop::before {
   content: "";
-  background: url(./images/Up_Arrow-button.svg) no-repeat;
+  background: url(../images/Up_Arrow.svg) no-repeat center center;
   width: 40px;
   height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

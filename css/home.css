@@ -352,6 +352,7 @@
 }
 .lab-headline em {
   font-weight: 700;
+  font-style: normal;
 }
 .lab-text {
   font-size: 1.8rem;
@@ -360,12 +361,13 @@
 }
 .lab-text em {
   font-weight: 700;
+  font-style: normal;
 }
 .lab-text::after {
   content: "";
   position: absolute;
   width: 70px;
-  border-bottom: 1px solid var(--theme-main);
+  border-bottom: 1px solid #7D6F5D;
   top: 55px;
   left: 50%;
   transform: translateX(-50%);
@@ -383,13 +385,13 @@
   height: 692px;
 }
 .lab-menu {
-  background: url(./images/lab_menu.png) no-repeat 0 0;
+  background: url(../images/lab_menu.png) no-repeat 0 0;
   position: absolute;
   transform: scale(0.95);
   transition: all 0.5s ease;
 }
 .lab-barista {
-  background: url(./images/lab_barista.png) no-repeat 0 0;
+  background: url(../images/lab_barista.png) no-repeat 0 0;
   position: absolute;
   bottom: 0;
   right: 0;  
@@ -404,7 +406,7 @@
   transform: none;
 }
 .lab-menu a, .lab-barista a {
-  color: var(--theme-light3);
+  color: #FFFCF9;
   font-size: 32px;
   font-weight: 700;
   display: inline-block;
@@ -432,32 +434,106 @@
 /* 섹션 8부분  */
 /* 섹션 8 배경 */
 .learning-container {
-  background: url(../images/Photo-blind.png) no-repeat 0 0 / 100%;
+  background: url(../images/Photo-blind.png) no-repeat 0 0 fixed;
+  background-size: auto 100%;
+  padding: 120px;
+  height: 560px;
   position: relative;
-
 }
+/* .medal-container {
+  width: 300px;
+  height: 300px;
+} */
+/* 메달 앞부분 */
+.medal-front {
+  background-color: #FFFCF9;
+  box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 2s;
+}
+.medal-front::after {
+  content: "";
+  background: url(../images/StarSymbol.svg) 0 0 no-repeat;
+  width: 90px;
+  height: 122px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.medal-front:hover + .medal-back {
+  visibility: visible;
+  z-index: 2;
+}
+/* 메달 뒷부분 */
 .medal-back {
   width: 300px;
   height: 300px;
   background: #FFFCF9;
   border-radius: 50%;
   box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
 }
+.medal-back::after {
+  content: "";
+  background: url(../images/W.png) no-repeat 0 0;
+  position: absolute;
+  width: 148px;
+  height: 106px;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 메달 뒷부분 텍스트 */
 .learning-headline {
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 700;
   color: #7D6F5D;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+.learning-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #7D6F5D;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.learning-text em {
+  font-style: normal;
+  font-weight: 700;
+}
+.medal-back a {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #7D6F5D;
+  border-radius: 3px;
+  color: #7D6F5D;
+  font-weight: 700;
 }
 
 /* 공통푸터 */
 .footer-container{
   position: relative;
   width: 100%;
-  background: var(--theme-dark);
+  background: #282725;
 }
 .footer {
   position: relative;
-  width: 1420px;
+  width: 1440px;
   margin: 0 auto;
   color: rgba(255, 252, 249, 0.6);
 }
@@ -498,7 +574,7 @@
   font-weight: 700;
 }
 .site-info a:hover {
-  color: var(--theme-light3);
+  color: #FFFCF9;
   opacity: 1;
 }
 
@@ -532,11 +608,7 @@
 }
 .gototop::before {
   content: "";
-  background: url(./images/Up_Arrow-button.svg) no-repeat;
+  background: url(../images/Up_Arrow.svg) no-repeat center center;
   width: 40px;
   height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
