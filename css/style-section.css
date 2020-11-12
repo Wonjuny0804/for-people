@@ -16,11 +16,11 @@
 }
 
 .multi {
-    background-color: var(--theme-light3);
+    background-color: #FFFCF9;
 }
 
 .euid {
-    background-color: var(--theme-dark);
+    background-color: #282725;
 }
 
 /* .multi__list,
@@ -63,15 +63,15 @@
 
 .multi__headline {
     width: 880px;
-    background: var(--theme-light3);
-    color: var(--theme-dark);
+    background:  #FFFCF9;
+    color: #282725;
 }
 
 .euid__headline {
     width: 610px;
     right: 0;
-    background: var(--theme-dark);
-    color : var(--theme-light3);
+    background: #282725;
+    color : #FFFCF9;
 }
 
 
@@ -124,6 +124,7 @@
 }
 
 /* section 03 */
+
 .course-container {
     width: 1440px;
     height: 460px;
@@ -132,15 +133,15 @@
     padding: 30px 100px 30px 120px;
 }
 
+/* 강좌 리뷰 */
 .course-review {
     position: relative;
     background-color: #282725;
     padding: 90px 165px 90px 90px;
     overflow: hidden;
     flex-basis: 60%;
-
-
 }
+
 .course-review::before{
     content: "5";
     position: absolute;
@@ -152,7 +153,6 @@
     font-weight: 300;
     font-size: 60rem;
     line-height: 140%;
-    left: calc(50% - 360px/2 + 216.5px);
 }
 
 .content-hidden {
@@ -163,7 +163,7 @@
 }
 
 .review__content {
-    color: var(--theme-light3);
+    color: #FFFCF9;
 }
 
 .review__content-head {
@@ -174,7 +174,7 @@
 
 .review__content-head::before {
     content: "";
-    border-top: 1px solid var(--theme-main);
+    border-top: 1px solid #7D6F5D;
     display: block;
     width: 40px;
     margin-bottom: 30px;
@@ -205,23 +205,25 @@
     font-size: 1.3rem;
 }
 
+/* 인기 강좌 순위 및 강좌 브로슈어 */
 .course-box {
     display: flex;
-    flex-flow: row wrap;
-    align-content: stretch;
-    justify-content: center;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     margin-left: 20px;
     flex-basis: 40%;
 }
 
+/* 인기 강좌 순위 */
 .course-favorite {
     position: relative;
-    background-color: var(--theme-light3);
-    width: 100%;
+    background-color: #FFFCF9;
+    /* width: 100%; */
     padding: 30px 30px 20px 35px;
     margin-bottom: 20px;
     font-size: 1.6rem;
-    color: var(--theme-main);
+    color: #7D6F5D;
+ 
 }
 
 .favorite-heading {
@@ -246,7 +248,6 @@
     position: absolute;
     right: 0;
 }
-
 
 .favorite__more {
     background: gray;
@@ -322,29 +323,39 @@
 
 
 
-
-
-
+/* 강좌 브로슈어 */
 .course-brochure {
     background-color: #E27762;
-    width: 100%;
-    padding: 10px 20px 20px 10px;
+    /* width: 100%; */
+    padding: 25px;
     position: relative;
+  
 }
 
-.course-brochure svg {
-    position: absolute;
-    right: 0;
-}
 .brochure__download a {
     display: inline-block;
     font-size: 3.1rem;
     color: #FFFCF9;
     font-weight: 700;
-    /* background: yellow; */
-    white-space: pre-wrap;
     width: 145px;
-    padding: 10px;
+    height: 160px;
+}
+
+.brochure__arrow {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+.brochure__download::after {
+    content: "";
+    width: 275px;
+    height: 203px;
+    background: url(../images/Cafe-Brochure.png) no-repeat 0 0 / 100%;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
 }
 
 /* section 06 */
