@@ -1,23 +1,95 @@
-@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
-/* jwkim 코드 ================== */
 /* reset 코드 */
-h1,h2,h3,h4,h5,h6{
+
+/* 셀렉션 스타일 */
+::-moz-selection {
+  /* 파이어폭스를 위한 -moz */
+  background: #7D6F5D;
+  color: #ffffff;
+}
+::selection {
+  background: #7D6F5D;
+  color: #ffffff;
+}
+
+/* 루트 요소의 기본 글자크기 설정, 세로스크롤바 보이게 설정 */
+html {
+  font-size: 10px;
+  overflow-y: visible;
+}
+
+/* 기본 박스사이징 설정 */
+body,
+body *,
+body::before,
+body::after,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+/* 탭 하이라이트 색상, 터치를 위해 색상을 줌 */
+body * {
+  -webkit-tap-highlight-color: rgba(255, 255, 200, 0.3);
+  tap-highlight-color: rgba(255, 255, 200, 0.3);
+}
+
+/* 본문 기본 폰트, 글자 크기, 굵기, 배경 색상 지정 */
+body {
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #fff;
+  color: #181818;
   margin: 0;
 }
-ul, ol{
-  margin: 0;
+
+/* a 요소 내 이미지에 발생하는 갭 제거, 블록안에 인라인 요소를 줬을 경우 갭을 위한 코드 */
+a img {
+  vertical-align: middle;
+}
+
+/* 포커스 시 아웃라인 커스텀 디자인 */
+:focus {  
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgba(125, 111, 93, 1);
+}
+
+.button {
+  cursor: pointer;
+  border: none;
   padding: 0;
-  list-style-type: none;
-  line-height: 1;
 }
-a{
+
+/* 버튼이 disabled 일 때 커서를 움직일 수 없는 상태로 만들어줌 */
+button[disabled] {
+  cursor: not-allowed;
+}
+.reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* 링크 요소의 밑줄 및 글자 색상 재정의 */
+a {
   color: inherit;
   text-decoration: none;
 }
 
-button{
+fieldset {
   border: 0;
+  margin: 0;
   padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+
+ul, ol{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 input{
@@ -25,159 +97,34 @@ input{
   border: 0;
 }
 
-/* 조립 코드 */
-.a11y-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: 0;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
-    clip: rect(0 0 0 0);
-    clip: rect(0, 0, 0, 0);
+figure{
+  margin: 0;
 }
 
+/* 조립 코드 */
+.a11y-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+}
 
 .flex-default{
-    display: flex;
-    flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-
-/* hjpark 코드 ===============================*/
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  .a11y-hidden {
-    overflow: hidden;
-    position: absolute !important;
-    clip: rect(0, 0, 0, 0);
-    clip-path: polygon(0 0, 0 0, 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-  }
-/*  겹치는 코드
-a {
-    color: inherit;
-    text-decoration: none;
+/* 자세히보기 */
+.more-info{
+  position: absolute;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 5px 25px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
 }
-*/
-.reset-list {
-    margin-top: 0;
-    margin-bottom: 0;
-    /* padding-left: 0; */
-    list-style: none;
-}
-
-/* gabae 코드 ======================================*/
-
-
-/* reset 코드 */
-/* 스타일 초기화 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  box-sizing: border-box;
-  vertical-align: baseline;
-}
-/* 기본 폰트 */
-html {
-    font-size: 10px;
-    line-height: 1.15;
-}
-/*
-body {
-    width: 1440px;
-    margin: 0 auto;
-    font-family: 'Spoqa Han Sans', 'Sans-serif';
-    font-size: 1.6rem;
-    font-weight: 400;
-    background-color: #fff;  
-}
-  */
