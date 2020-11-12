@@ -10,10 +10,11 @@ body{
 
 .header, 
 .cafew-season,
+.cafew-course,
 .cafew-youtube,
 .cafew-reserve,
 .cafew-store{
-  width: 1420px;
+  width: 1440px;
   margin: 0 auto;
 }
 

@@ -54,7 +54,7 @@ a img {
   box-shadow: 0 0 0 4px rgba(125, 111, 93, 1);
 }
 
-.button {
+button {
   cursor: pointer;
   border: none;
   padding: 0;

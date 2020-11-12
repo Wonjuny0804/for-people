@@ -1,134 +1,10 @@
-
-.section-container {
-    margin: 0 auto;
-}
-
-/* section02 - 추천 강좌 목록 */
-
-.recommend-container {
-    width: 1440px;
-    height: 620px;
-}
-
-.multi,
-.euid {
-    position: relative;
-}
-
-.multi {
-    background-color: #FFFCF9;
-}
-
-.euid {
-    background-color: #282725;
-}
-
-/* .multi__list,
-.multi__btn-prev,
-.multi__btn-next,  */
-.euid__list,
-.euid__btn-prev,
-.euid__btn-next {
-    display: none;
-}
-
-.is-active .multi__list,
-.is-active .multi__btn-prev,
-.is-active .multi__btn-next,
-.is-active .euid__list,
-.is-active .euid__btn-prev,
-.is-active .euid__btn-next {
-    display: block;
-}
-
-.tab {
-    position: absolute;
-    font-size: 1.6rem;
-    font-weight: 400;
-    top: 0;
-    height: 65px;    
-    text-align: right;
-    vertical-align: middle;
-    /* margin: 25px 0; */
-}
-
-.tab a {
-    display: block;
-    padding: 25px 20px;
-}
-.tab em {
-    font-weight: 600;
-
-}
-
-.multi__headline {
-    width: 880px;
-    background:  #FFFCF9;
-    color: #282725;
-}
-
-.euid__headline {
-    width: 610px;
-    right: 0;
-    background: #282725;
-    color : #FFFCF9;
-}
-
-
-.multi__headline em,
-.euid__headline em {
-} 
-
-.multi__list, 
-.euid__list {
-    background-color: yellow;
-    position: absolute;
-    top: 65px;
-    width: 100%;
-    height: 560px;
-    display: flex;
-    /* justify-content: space-between; */
-    /* padding-top: 60px; */
-}
-
-.multi__list li,
-.euid__list li {
-    display: none;
-    background: pink;
-    /* height: 425px;
-    margin: 40px 20px 95px; */
-}
-
-.multi__btn-prev,
-.multi__btn-next,
-.euid__btn-prev,
-.euid__btn-next {
-    background: blue;
-    position: absolute;
-    top: 105px;
-    width: 120px;
-    height: 425px;
-    z-index: 5;
-}
-
-.multi__btn-next,
-.euid__btn-next {
-    right: 0;
-}
-
-.multi__pagination-container,
-.euid__pagination-container {
-    position: absolute;
-    bottom: 0;
-    /* display: none; */
-}
-
 /* section 03 */
-
-.course-container {
-    width: 1440px;
-    height: 460px;
+.cafew-course-container {
     background: #7D6F5D;
+}
+
+.cafew-course {    
+    height: 460px;
     display: flex;
     padding: 30px 100px 30px 120px;
 }
@@ -137,7 +13,7 @@
 .course-review {
     position: relative;
     background-color: #282725;
-    padding: 90px 165px 90px 90px;
+    padding: 60px 165px 90px 90px;
     overflow: hidden;
     flex-basis: 60%;
 }
@@ -157,9 +33,6 @@
 
 .content-hidden {
     display: none;
-}
-
-.review__list {
 }
 
 .review__content {
@@ -185,6 +58,7 @@
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 25px;
+    opacity: 0.7;
 }
 
 .review__content-rate {
@@ -193,6 +67,7 @@
     align-items: center;
     margin: 20px 0;
 }
+
 .review__content-rate span{
     padding-left: 10px;
     /* display: inline-block; */
@@ -205,11 +80,25 @@
     font-size: 1.3rem;
 }
 
+.review__play {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    background: url(../images/Play-w.svg) no-repeat center center;
+}
+
+.review__play:hover {
+    background: url(../images/pause-w.svg) no-repeat center center;
+}
+
+
 /* 인기 강좌 순위 및 강좌 브로슈어 */
 .course-box {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
+    flex-flow: row wrap;
     margin-left: 20px;
     flex-basis: 40%;
 }
@@ -218,116 +107,85 @@
 .course-favorite {
     position: relative;
     background-color: #FFFCF9;
-    /* width: 100%; */
-    padding: 30px 30px 20px 35px;
+    padding: 25px 30px 20px 25px;
     margin-bottom: 20px;
     font-size: 1.6rem;
+    font-weight: 500;
     color: #7D6F5D;
- 
+    width: 100%;
 }
 
 .favorite-heading {
-    background: yellow;
     font-size: 2.4rem;
     font-weight: 700;
 }
 
 .favorite-heading em {
+    font-style: normal;
     font-size: 2.6rem;
+}
+
+.favorite-list {
+    margin-top: 20px;
 }
 
 .favorite-list__item {
     counter-increment: rank;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
-.favorite-list__item a::before {
-    content: counter(rank);
-} 
+.favorite-list__item::before {
+    content: counter(rank) ".";
+    top: 0;
+    left: 0;
+    color: inherit;
+}
+
+.favorite-list__item a {
+    margin-left: 5px;
+    flex-grow: 1;
+    line-height: 20px;
+}
 
 .favorite-list__item em {
+    position: relative;
+    height: 17px;
+    width: 16px;
+    text-indent: 25px;
+    overflow: hidden;
+}
+
+.favorite-list__item img {
     position: absolute;
+    width: 100%;
+    height: 100%;
     right: 0;
+    top: 1px;
 }
 
 .favorite__more {
-    background: gray;
     position: absolute;
     padding: 5px;
-    top: 25px;
-    right: 25px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E27762;
+    right: 30px;
+    top: 30px;
 }
 
-
-
-
-.favorite-list a {
-    margin: 0 10px 0 20px;
-    /* flex-grow: 1; */
-    display: block;
-}
-
-.up,
-.down,
-.stop {
-    /* display: inline-block; */
-    font-style: normal;
-    width: 9px;
-    height: 0;
-    padding-top: 11px;
-    overflow: hidden;
-    background-image: url(./images/rank.png);
-    background-repeat: no-repeat;
+.favorite__more img {
     position: absolute;
-    /* 내부적으로 블록이 되니까 인라인블록 지정 안해도 됨 */
-    right: 0;
-    top: 50%;
-    margin-top: -5px;
+    width: 50%;
+    height: 50%;
 }
-
-.up {
-    background-position: 0 0;
-}
-
-.stop {
-    background-position: 0 50%;
-}
-
-.down {
-    background-position: 0 100%;
-}
-
-.favorite-more {
-    position: absolute;
-    top: 2px; 
-    right: 2px;
-    padding: 8px;
-}
-
-
-.favorite-more::before {
-    color: hsla(110, 50%, 30%, 1)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 강좌 브로슈어 */
 .course-brochure {
     background-color: #E27762;
-    /* width: 100%; */
-    padding: 25px;
+    width: 100%;
+    padding: 20px 0 15px 25px;
     position: relative;
   
 }
@@ -338,7 +196,7 @@
     color: #FFFCF9;
     font-weight: 700;
     width: 145px;
-    height: 160px;
+    /* height: 120px; */
 }
 
 .brochure__arrow {
