@@ -162,7 +162,7 @@ body{
 }
 .footer {
   position: relative;
-  width: 1420px;
+  width: 1440px;
   margin: 0 auto;
   color: rgba(255, 252, 249, 0.6);
 }
@@ -225,7 +225,7 @@ body{
   text-transform: uppercase;
   text-align: center;
 }
-*
+
 /* 상단 이동 */
 .gototop {
   position: fixed;

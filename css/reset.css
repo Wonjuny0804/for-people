@@ -49,12 +49,12 @@ a img {
 }
 
 /* 포커스 시 아웃라인 커스텀 디자인 */
-:focus {  
+/* :focus {  
   border-radius: 2px;
   box-shadow: 0 0 0 4px rgba(125, 111, 93, 1);
-}
+} */
 
-.button {
+button {
   cursor: pointer;
   border: none;
   padding: 0;
