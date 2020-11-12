@@ -1,0 +1,160 @@
+/* 포커스 시 아웃라인 커스텀 디자인 */
+:focus {
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgba(125, 111, 93, 1);
+}
+
+/* section_01 */
+.cafew-season-container{
+  width: 100%;
+  background: #F3D6B0;
+}
+.cafew-season{
+  position: relative;
+  padding-bottom: 220px;
+}
+.season__txt{
+  padding-top: 80px;
+  text-align: center;
+  width: 410px;
+}
+
+.season__txt [lang="en"]{
+  letter-spacing: 0.5rem;
+}
+
+.txt__01,
+.txt__02{
+  font-size: 4rem;
+  font-weight: 500;
+  /* 원래 400 */
+  color: #A37356;
+}
+
+.txt__01{
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.txt__02{
+  display: block;
+}
+
+.txt__02::before,
+.txt__02::after{
+  content: "";
+  vertical-align: 9px;
+  display: inline-block;
+  width: 160px;
+  border-bottom: 2px solid #A37356;
+}
+
+.txt__02::before{
+  margin-right: 17px;
+}
+
+.txt__02::after{
+  margin-left: 17px;
+}
+
+.txt__03,
+.txt__04{
+  font-size: 9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 9rem;
+  color: #E27762;
+}
+
+.txt__05{
+  display: block;
+  font-size: 2.6rem;
+  color: #A37356;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.txt__05::after{
+  content: "";
+  display: block;
+  width: 410px;
+  border-bottom: 2px solid #A37356;
+  margin-top: 20px;
+}
+
+.beverage__item figure{
+  position: absolute;
+  animation: bounce 600ms ease-in-out infinite alternate;
+}
+
+.item__container-01{
+  bottom: 15px;
+  left: 400px;
+  width: 470px;
+}
+
+.beverage__item .item__container-02{
+  top: 60px;
+  right: 400px; 
+  width: 340px;
+  animation-delay: 0.2s;
+}
+
+.item__container-03{
+  width: 300px;
+  bottom: 50px;
+  right: 80px; 
+}
+
+@keyframes bounce{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(5px);
+  }
+}
+
+.beverage__item img{
+  width: 283px;
+}
+
+.item__container-03 img{
+  position: relative;
+  right: 70px;
+}
+
+.beverage__item figcaption{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #412311;
+  line-height: 2.8rem;
+  padding: 10px;
+}
+
+.beverage__item span{
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3em;
+}
+
+.beverage__item span:last-child{
+  margin-bottom: 10px;
+}
+
+.season-details{
+  bottom: 145px;
+  left: 140px;
+  color: #E27762;
+}
+
+.season-details:hover,
+.season-details:focus{
+  background-color: #E27762;
+  color: #FFFCF9;
+  border-color: #E27762;
+}
