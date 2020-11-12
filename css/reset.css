@@ -48,6 +48,7 @@ a img {
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
 /* 포커스 시 아웃라인 커스텀 디자인 */
 :focus {  
   border-radius: 2px;
@@ -55,6 +56,9 @@ a img {
 }
 
 .button {
+=======
+button {
+>>>>>>> 25192f11783d843756586673b826f9b9d391172f
   cursor: pointer;
   border: none;
   padding: 0;
@@ -96,6 +100,10 @@ figure{
   margin: 0;
 }
 
+dl,dt,dd{
+  margin: 0;
+}
+
 /* 조립 코드 */
 .a11y-hidden{
   position: absolute;
@@ -122,4 +130,25 @@ figure{
   padding: 5px 25px;
   border: 2px solid currentColor;
   border-radius: 3px;
+}
+
+/* table */
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+   display: block;
+   margin: 0;
+   padding: 0;
+   border: none;
+   border-collapse: inherit;
+   border-spacing: 0;
+   -webkit-border-horizontal-spacing: 0;
+   -webkit-border-vertical-spacing: 0;
+}
+th, td {
+   display: inline;
 }
