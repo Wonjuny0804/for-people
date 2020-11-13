@@ -15,9 +15,9 @@
 
 
 ### 사용된 기술
-![HTML5](./images/md/html5_logo.png)  ![CSS3](./images/md/css3_logo.png)   ![Git](./images/md/git_1.png )
-
-최신 HTML5, CSS3기술을 사용하여 만들었습니다. 
+ - HTML5
+ - CSS3
+ - Git
 
 ### 지원 브라우저
 - chrome
