@@ -1,0 +1,109 @@
+/* 포커스 시 아웃라인 커스텀 디자인 */
+:focus {
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgba(125, 111, 93, 1);
+}
+
+/* 섹션 8부분  */
+/* 섹션 8 배경 */
+.learning-container {
+  background: url(../images/Photo-blind.png) no-repeat 0 0 fixed;
+  background-size: auto 100%;
+  padding: 120px;
+  height: 560px;
+  /* position: relative; */
+}
+.medal-container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+/* 메달 앞부분 */
+.medal-front {
+  background-color: #FFFCF9;
+  box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: 0;
+  /* left: 60px; */
+  left: 50%;
+  transform: translateX(-50%);
+  /* bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 2s; */
+}
+.medal-front::after {
+  content: "";
+  background: url(../images/StarSymbol.svg) 0 0 no-repeat;
+  width: 90px;
+  height: 122px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 메달 뒷부분 */
+.medal-back {
+  width: 300px;
+  height: 300px;
+  background: #FFFCF9;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(103, 48, 25, 0.3);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  /* position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%); */
+  visibility: hidden;
+}
+.medal-back::after {
+  content: "";
+  background: url(../images/W.png) no-repeat 0 0;
+  position: absolute;
+  width: 148px;
+  height: 106px;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.medal-container:hover .medal-front {
+  visibility: hidden;
+}
+.medal-container:hover .medal-back {
+  visibility: visible;
+  z-index: 2;
+}
+/* 메달 뒷부분 텍스트 */
+.learning-headline {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #7D6F5D;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+.learning-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #7D6F5D;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.learning-text em {
+  font-style: normal;
+  font-weight: 700;
+}
+.medal-back a {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #7D6F5D;
+  border-radius: 3px;
+  color: #7D6F5D;
+  font-weight: 700;
+}

@@ -1,27 +1,3 @@
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-.a11y-hidden {
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-.reset-list {
-  margin-top: 0;
-  margin-bottom: 0;
-  /* padding-left: 0; */
-  list-style: none;
-}
 /* 로그인 메인 컨테이너 */
 .main-container {
   background: url(../images/coffee-background.png) no-repeat 0 0 / 100% 100%;
@@ -94,7 +70,7 @@ a {
 /* 로그인 제목과 설명 */
 .sign-in__headline {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 700;
   color: #7D6F5D;
   margin: 0;
@@ -102,7 +78,7 @@ a {
   text-align: center;
 }
 .sign-in__intro {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #7D6F5D;
   margin-top: 0;
   margin-bottom: 25px;
@@ -125,13 +101,13 @@ a {
 
 .member-id label, .member-pw label {
   display: block;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #7D6F5D;
 }
 .member-id input, .member-pw input {
   width: 430px;
-  font-size: 13px;
+  font-size: 1.3rem;
   text-indent: 5px;
   line-height: 34px;
   margin-top: 10px;
@@ -182,7 +158,7 @@ a {
 /* 아이디 및 패스워드 에러 메세지 */
 .member-id [role="alert"],
 .member-pw [role="alert"] {
-  font-size: 11px;
+  font-size: 1.1rem;
   color: #E26E6B;
   position: absolute;
   height: 18px;
@@ -235,7 +211,7 @@ a {
 .sign-in__checkbox::before {
   content: "";
   position: absolute;
-  background: #CFCCC7;
+  background: #9c9a97;
   left: -1px;
   top: -3px;
   width: 20px;
@@ -247,19 +223,19 @@ a {
 }
 .save-id input:checked + span,
 .keep-sign-in input:checked + span {
-  background: #7D6F5D;
-  opacity: 0.6;
+  background: #ac9881;
+  /* opacity: 0.6; */
 }
 .save-id input:checked + span::before,
 .keep-sign-in input:checked + span:before {
   transform: translateX(23px);
   background: #7D6F5D;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
-  opacity: 1;
+  /* opacity: 1; */
 }
 .save-and-keep label {
   color: #7D6F5D;
-  font-size: 14px;
+  font-size: 1.4rem;
   cursor: pointer;
   /* display: inline-block; */
   /* padding-left: 40px; */
@@ -288,7 +264,7 @@ a {
   margin: 25px auto 0 160px;
 }
 .sign-in__info p {
-  font-size: 12px; 
+  font-size: 1.2rem; 
   padding-left: 10px;
   color: #7D6F5D;
   line-height: 1.5;
@@ -319,7 +295,7 @@ a {
   border: 0;
   background-color: #7D6F5D;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #FFFCF9;
 }
@@ -328,7 +304,7 @@ a {
   cursor: pointer;
 }
 .sign-in__request [role="alert"] {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #E27762;
   position: absolute;
@@ -358,7 +334,7 @@ a {
   display: inline-block;
   margin: 0 10px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 .account-service a:hover {
@@ -366,92 +342,5 @@ a {
   opacity: 1;
 }
 .account-service .divider {
-  font-size: 14px;
-}
-/* 공통푸터 */
-.footer-container{
-  position: relative;
-  width: 100%;
-  background: #282725;
-}
-.footer {
-  position: relative;
-  width: 1440px;
-  margin: 0 auto;
-  color: rgba(255, 252, 249, 0.6);
-}
-.footer-container::after{
-  content: "";
-  display: block;
-  width: 100%;
-  border-bottom: 1px solid rgba(255, 252, 249, 0.2);
-  position: absolute;
-  top: 82px;
-  left: 0;
-}
-/* 푸터 로고 */
-.footer__brand-logo {
-  position: absolute;
-  /* background: url(./images/CafeW-Vertical.svg) no-repeat 0 0; */
-  width: 77px;
-  height: 90px;
-  top: 122px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer__brand-logo svg{
-  width: 100px;
-  height: 100%;
-}
-
-/* 푸터 인포 */
-.site-info {
-  padding: 30px 180px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-.site-info li {
-  font-size: 16px;
-  font-weight: 700;
-}
-.site-info a:hover {
-  color: #FFFCF9;
-  opacity: 1;
-}
-
-/* 푸터 주소 */
-.address {
-  font-style: normal;
-  font-size: 14px;
-  text-align: center;
-  padding-top: 170px;
-  line-height: 1.5;
-}
-/* 카피라이터 */
-.copyright {
-  font-size: 14px;
-  font-weight: 700;
-  display: block;
-  margin-top: 30px;
-  padding-bottom: 60px;
-  text-transform: uppercase;
-  text-align: center;
-}
-/* 상단 이동 */
-.gototop {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 60px;
-  height: 60px;
-  background: #E27762;
-  border-radius: 50%;
-}
-.gototop::before {
-  content: "";
-  background: url(../images/Up_Arrow.svg) no-repeat center center;
-  width: 40px;
-  height: 40px;
+  font-size: 1.4rem;
 }

@@ -14,7 +14,88 @@
 
 </head>
 <body>
-  <div class="skip-nav"><a href="#content">본문 바로가기</a></div>
+  <!-- skip-nav -->
+  <div class="skip-nav">
+    <a href="#Navigation">메뉴 바로가기</a>
+    <a href="#Store">매장 찾기</a>
+  </div>
+  <div class="header-container">
+    <!-- header -->
+    <header class="header">
+      <div class="header__top-menu flex-default">
+        <h1 class="header__headline">
+          <a href="#">
+            <img src="../images/logo.svg" alt="Cafe W logo" />
+          </a>
+          <span class="a11y-hidden">CAFE W</span>
+        </h1>
+        <ul class="header__list">
+          <li>
+            <a href="#">Sign In</a>
+          </li>
+          <li>
+            <a href="#">Sign Up</a>
+          </li>
+        </ul>
+        <form action="#" method="get" class="header__search">
+          <h2 class="a11y-hidden">검색</h2>
+          <fieldset class="flex-default">
+            <legend class="a11y-hidden">검색폼</legend>
+            <label for="searchForm" class="a11y-hidden">자료검색</label>
+            <input type="text" id="searchForm" class="search__form" name="search" required />
+            <a href="#" class="search__btn" title="검색">
+              <img src="../images/Search.svg" alt="검색버튼" />
+            </a>
+          </fieldset>
+        </form>
+      </div>
+      <nav class="navigation" id="Navigation">
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="nav__menu flex-default">
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Drinks</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">콜드 브루</a></li>
+              <li><a href="#">에스프레소</a></li>
+              <li><a href="#">기타 제조 음료</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Foods</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">베이커리</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">샌드위치 & 샐러드</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Products</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">머그</a></li>
+              <li><a href="#">텀블러</a></li>
+              <li><a href="#">커피용품</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Lectures</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">UI 구조 & 디자인</a></li>
+              <li><a href="#">UI 인터렉션 주니어</a></li>
+              <li><a href="#">리액트 프로그래밍</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Customer Service</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">추천 채널</a></li>
+              <li><a href="#">체크 리스트</a></li> 
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
   <!-- 로그인 메인 섹션 -->
   <main class="main-container" id="content">
     <div class="bg">
@@ -79,20 +160,13 @@
     </section>
   </div>
   </main>
-  <!-- 공통 푸터 -->
   <div class="footer-container">
+    <!-- footer -->
     <footer class="footer">
-      <!-- 브랜드 로고 -->
       <div class="footer__brand-logo">
-        <!-- <svg>
-          <title>cafe W Logo</title>
-        </svg> -->
-        <svg class="icon">
-          <use xlink:href="#footer_logo"></use>
-        </svg>
+        <img src="../images/footer_logo.svg" alt="cafe W Logo" />
       </div>
-      <!-- 사이트 내 정보 -->
-      <ul class="reset-list site-info">
+      <ul class="reset-list footer__site-info">
         <li><a href="#">개인정보 처리방침</a></li>
         <li><a href="#">멤버스 이용약관</a></li>
         <li><a href="#">가맹 안내</a></li>
@@ -101,36 +175,23 @@
         <li><a href="#">고객의 소리</a></li>
         <li><a href="#">사이트맵</a></li>
       </ul>
-      <!-- 카페 더블유 주소 등 정보 -->
-      <address class="address">
+      <address class="footer__address">
         <span>서울시 강남구 테헤란로 10길 18 K&amp;I 타워 카페 W (2F)</span>
-        <span class="divider" aria-hidden="true">ㅣ</span>
+        <span class="address__divider" aria-hidden="true">ㅣ</span>
         <span>연락처 : 02-6951-2121</span>
         <div>
           <span>사업자 등록번호 : 107-86-16302</span>
-          <span class="divider" aria-hidden="true">ㅣ</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
           <span>통신판매업 신고 : 강남 제 022519호</span>
-          <span class="divider" aria-hidden="true">ㅣ</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
           <span>대표이사 : 김데레사</span>
         </div>
       </address>
-      <small class="copyright">&copy; 2020 cafe w company.all rights reserved.</small>
+      <small class="footer__copyright">&copy; 2020 cafe w company.all rights reserved.</small>
     </footer>
   </div>
+
   <!-- 상단 이동 -->
-  <a href="#" class="gototop" aria-label="상단 이동">
-    <!-- <svg>
-      <title>페이지 상단 이동</title>
-    </svg> -->
-  </a>
-  <!-- 화살표 이미지 svg로 삽입할 경우에는 '페이지 상단 이동'을 svg 태그 내 title요소에 작성 -->
-  <svg width="0" height="0" class="hidden">
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 90" id="footer_logo">
-      <g opacity=".45" fill="#CFCCC7">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M71.373 63.08c-4.066 6.33-24.469 5.752-32.912 5.752-8.442 0-27.049 0-32.912-5.753C.391 57.954 0 40.01 0 34.416s.39-23.539 5.55-28.59C11.411 0 30.018 0 38.46 0c8.444 0 27.05 0 32.913 5.827C76.532 10.877 77 28.822 77 34.417c0 5.592-.468 23.537-5.627 28.662zM67.307 9.866C63.788 6.37 49.56 5.75 38.46 5.75c-11.1 0-25.329.62-28.768 4.117-2.736 2.718-3.986 15.304-3.986 24.55 0 9.243 1.25 21.83 3.986 24.548 3.44 3.495 17.667 4.194 28.768 4.194 11.1 0 25.327-.7 28.846-4.194 2.736-2.719 3.908-15.305 3.908-24.549.001-9.245-1.172-21.83-3.908-24.549zm-5.941 32.006h-45.81L12.741 19.81l13.994 9.632 11.726-11.73 11.804 11.731 13.994-9.632-2.893 22.061zm-1.094 8.624H16.73l-.704-4.816h44.873l-.626 4.816zM49.797 35.193L38.461 24.006 27.127 35.193l-8.6-6.06 1.016 8.003h37.836l1.094-8.002-8.676 6.06z"></path>
-        <path d="M22.217 84.818c0 .38.053.717.159 1.01.115.282.264.522.446.717.192.185.408.326.648.424.24.098.49.147.75.147.335 0 .623-.028.863-.082.25-.054.47-.13.663-.228.106-.055.22-.12.346-.196a1.21 1.21 0 01.403-.146c.26-.055.494-.033.706.065.21.098.389.282.532.554.183.337.226.674.13 1.01-.086.337-.254.62-.504.848-.403.37-.888.635-1.455.798A5.723 5.723 0 0124.22 90a6.138 6.138 0 01-1.83-.277 4.48 4.48 0 01-1.598-.88 4.677 4.677 0 01-1.123-1.565c-.279-.64-.418-1.412-.418-2.314v-3.39c0-.901.14-1.667.418-2.297.288-.642.662-1.163 1.123-1.565a4.355 4.355 0 011.599-.896 6.138 6.138 0 011.83-.277c.643 0 1.204.076 1.684.228.49.152.874.342 1.153.57.297.24.504.538.619.897a1.33 1.33 0 01-.086 1.043c-.145.282-.337.483-.577.602a1.08 1.08 0 01-.734.098 1.847 1.847 0 01-.447-.146 5.558 5.558 0 00-.345-.196 2.313 2.313 0 00-.548-.163 4.256 4.256 0 00-.72-.049c-.26 0-.509.05-.749.147-.24.098-.456.244-.648.44a2.094 2.094 0 00-.447.717 2.835 2.835 0 00-.158.994v3.097zm9.779-6.927c.144-.456.389-.793.734-1.01a2.05 2.05 0 011.124-.342c.365 0 .715.114 1.051.342.346.228.586.565.72 1.01l3.76 11.832h-3.17l-.56-2.02h-3.703l-.547 2.02h-3.11l3.7-11.832zm.706 7.057h2.203l-1.094-4.058-1.11 4.058zm7.454 4.775V79.18c0-.468.033-.864.1-1.19.077-.326.202-.592.375-.799.173-.206.403-.353.691-.44.288-.097.648-.146 1.08-.146H47.2c.211 0 .389.043.533.13.144.087.264.201.36.342.096.142.163.3.202.473.048.174.072.342.072.505 0 .163-.024.332-.072.505a1.36 1.36 0 01-.202.457 1.03 1.03 0 01-.36.326 1.13 1.13 0 01-.533.114h-3.66c-.163 0-.273.032-.33.098-.059.054-.087.179-.087.374v2.054h3.701c.212 0 .39.043.533.13.144.087.264.201.36.343.096.14.164.298.202.472.048.174.072.342.072.505 0 .163-.024.332-.072.505a1.36 1.36 0 01-.202.457 1.03 1.03 0 01-.36.326 1.13 1.13 0 01-.533.114h-3.701v4.89h-2.967zm12.222-8.051h3.932c.21 0 .389.044.533.13.144.087.264.202.36.343.096.141.163.299.201.473a1.722 1.722 0 010 .977 1.36 1.36 0 01-.201.457c-.087.13-.207.239-.36.326a1.132 1.132 0 01-.533.114h-3.932v1.906c0 .196.028.326.086.392.058.054.168.081.331.081h3.788c.212 0 .39.044.533.13a.859.859 0 01.36.326c.096.13.164.283.202.457a1.723 1.723 0 010 .994 1.348 1.348 0 01-.202.472 1.148 1.148 0 01-.36.343c-.144.087-.321.13-.533.13h-4.911c-.432 0-.792-.043-1.08-.13a1.512 1.512 0 01-.692-.457 1.906 1.906 0 01-.374-.798 5.996 5.996 0 01-.101-1.19v-7.97c0-.466.034-.863.1-1.189.078-.326.202-.592.375-.799.173-.206.404-.353.692-.44.288-.097.648-.146 1.08-.146h4.767c.212 0 .39.043.533.13.144.087.264.201.36.342.096.142.163.3.202.473.048.174.072.342.072.505 0 .163-.024.332-.072.505a1.364 1.364 0 01-.202.457 1.03 1.03 0 01-.36.326 1.13 1.13 0 01-.533.114h-3.644c-.163 0-.273.032-.331.098-.058.054-.086.179-.086.374v1.744z"></path>
-      </g>
-    </symbol>
-  </svg>
+  <a href="#" class="gototop" aria-label="상단 이동"></a>
 </body>
 </html>

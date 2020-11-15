@@ -1,7 +1,14 @@
 @import url("../css/reset.css");
 @import url("../css/common.css");
-@import url("../css/home.css");
+/* @import url("../css/home.css"); */
+@import url("../css/section_01.css");
+@import url("../css/section_02.css");
+@import url("../css/section_03.css");
+@import url("../css/section_04.css");
+@import url("../css/section_05.css");
+@import url("../css/section_06.css");
+@import url("../css/section_07.css");
+@import url("../css/section_08.css");
+@import url("../css/section_09.css");
 @import url("../css/sign-in.css");
 @import url("../css/signup.css");
-/* 수정 */
-@import url('./style-section.css');
