@@ -2,13 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>signup page</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- 회원가입 시트 작성 -->
-   <section class="member sign-up">
+  <!-- skip-nav -->
+  <div class="skip-nav">
+    <a href="#Navigation">메뉴 바로가기</a>
+    <a href="#SignUp">회원가입 바로가기</a>
+  </div>
+  <div class="header-container">
+    <!-- header -->
+    <header class="header">
+      <div class="header__top-menu flex-default">
+        <h1 class="header__headline">
+          <a href="../index.html">
+            <img src="../images/logo.svg" alt="Cafe W logo" />
+          </a>
+          <span class="a11y-hidden">CAFE W</span>
+        </h1>
+        <ul class="header__list">
+          <li>
+            <a href="./sign-in.html">Sign In</a>
+          </li>
+          <li>
+            <a href="./signup.html">Sign Up</a>
+          </li>
+        </ul>
+        <form action="#" method="get" class="header__search">
+          <h2 class="a11y-hidden">검색</h2>
+          <fieldset class="flex-default">
+            <legend class="a11y-hidden">검색폼</legend>
+            <label for="searchForm" class="a11y-hidden">자료검색</label>
+            <input type="text" id="searchForm" class="search__form" name="search" required />
+            <a href="#" class="search__btn" title="검색">
+              <img src="../images/Search.svg" alt="검색버튼" />
+            </a>
+          </fieldset>
+        </form>
+      </div>
+      <nav class="navigation" id="Navigation">
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="nav__menu flex-default">
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Drinks</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">콜드 브루</a></li>
+              <li><a href="#">에스프레소</a></li>
+              <li><a href="#">기타 제조 음료</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Foods</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">베이커리</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">샌드위치 & 샐러드</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Products</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">머그</a></li>
+              <li><a href="#">텀블러</a></li>
+              <li><a href="#">커피용품</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Lectures</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">UI 구조 & 디자인</a></li>
+              <li><a href="#">UI 인터렉션 주니어</a></li>
+              <li><a href="#">리액트 프로그래밍</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Customer Service</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">추천 채널</a></li>
+              <li><a href="#">체크 리스트</a></li> 
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- 회원가입 시트 작성 -->
+   <section class="member sign-up" id="SignUp">
        <!-- 회원가입 헤드라인 -->
        <h1 class="member__headline">sign up</h1>
        <!-- 헤드라인 밑에 있는 설명 -->
@@ -21,7 +103,7 @@
                <div class="member-form__id is--invalid">
                     <label for="userEmail" class="necessary">아이디</label>
                     <input type="email" id="userEmail" name="userEmail" required="true"
-                    aria-invalid="false" aria-describedby="emailErrorFeedback"/>
+                    aria-invalid="false" aria-describedby="emailErrorFeedback" placeholder="등록할 사용자 계정을 입력합니다. (예: seulbinim@gmail.com)"/>
                     <!-- placeholder -->
                     <span role="alert" id="emailErrorFeedback">이메일 서식이 잘못되었습니다. (예: seulbinim@gmail.com)</span>
                </div>
@@ -29,27 +111,26 @@
                <div class="member-form__pw is--valid">
                 <label for="userPassword" class="necessary">패스워드</label>
                 <input type="password" id="userPassword" name="userPassword" required="true"
-                aria-invalid="false" aria-describedby="passwordErrorFeedback"/>
+                aria-invalid="false" aria-describedby="passwordErrorFeedback" placeholder="비밀번호를 등록합니다. (특수문자 및 숫자 대,소문자 포함 8자리 이상)"/>
                 <span role="alert" id="passwordErrorFeedback">비밀번호의 형식이 잘못되었습니다. 비밀번호는 특수문자 및 숫자 대,소문자 포함 8자리 이상 입력해야 합니다.</span>
                </div>
                <!-- 회원가입 패스워드 확인 -->
                <div class="member-form__pw-check is--valid">
                     <label for="userPasswordCheck" class="necessary">패스워드 확인</label>
                     <input type="password" id="userPasswordCheck" name="userPassword" required="true"
-                    aria-invalid="false" aria-describedby="passwordCheckErrorFeedback"/>
+                    aria-invalid="false" aria-describedby="passwordCheckErrorFeedback" placeholder="등록한 사용자 계정 비밀번호와 동일해야 합니다."/>
                     <span role="alert" id="passwordCheckErrorFeedback">비밀번호가 일치하지 않습니다. 등록한 사용자 계정 비밀번호와 동일해야 합니다.</span>
                </div>
                <!-- 회원가입 이름 -->
                <div class="member-form__name is--valid" >
                     <label for="userName" class="necessary" >이름</label>
                     <input type="text" id="userName" name="userName" required="true"
-                    aria-invalid="false" aria-describedby="nameErrorFeedback"/>
+                    aria-invalid="false" aria-describedby="nameErrorFeedback" placeholder="예) 김데레사"/>
                     <span role="alert" id="nameErrorFeedback">이름에는 문자만 들어갈 수 있습니다. (예:김데레사)</span>
                </div>
                <!-- 회원가입 성별 -->
                <!--radiogroup-->
                <div class="member-form__gender is--valid">
-    
                     <p class="member-form__gender--title necessary">성별</p>
                     <div class="gender-options">
                       <input type="radio" id="female" name="gender" value="female"/>
@@ -220,7 +301,8 @@
                <!-- 회원가입 전화번호 -->
                <div class="member-form__phone is--valid">
                     <label for="userPhoneNumber" class="necessary">전화번호</label>
-                    <input type="tel" name="userPhoneNumber" id="userPhoneNumber" required="true" aria-invalid="false" aria-describedby="phoneErrorFeedback">
+                    <input type="tel" name="userPhoneNumber" id="userPhoneNumber" required="true" aria-invalid="false" aria-describedby="phoneErrorFeedback"
+                    placeholder="사용 중인 전화번호를 입력하세요. (하이픈 제외 숫자만 입력)">
                     <span role="alert" id="phoneErrorFeedback">전화번호는 하이픈을 제외한 숫자만 입력하세요.</span>
                 </div>
                <div class="member-form__auth">
@@ -228,14 +310,14 @@
                    <ul >
                        <li>
                            <figure>
-                              <img src="../css/images/Phone.png" alt="핸드폰 이미지">
+                              <img src="../images/Phone.svg" alt="핸드폰 이미지">
                                <figcaption><span>휴대폰 인증</span>본인 명의 휴대폰으로 인증 절차를 수행합니다.</figcaption>
                            </figure>
                            <a href="#" target="_blank">인증</a>
                        </li>
                        <li>
                         <figure>
-                            <img src="../css/images/Desktop.png" alt="컴퓨터 이미지">
+                            <img src="../images/Desktop.svg" alt="컴퓨터 이미지">
                             <figcaption><span>아이핀(i-PIN)인증</span>가입한 아이핀 ID를 사용해 인증 절차를 수행합니다.</figcaption>
                         </figure>
                         <a href="#" target="_blank">인증</a>
@@ -245,7 +327,8 @@
                <!-- 닉네임 -->
                <div class="member-form__nickname is--valid">
                     <label for="userNickName">닉네임</label>
-                    <input type="text" name="userNickName" id="userNickName" required="true" aria-invalid="false" aria-describedby="nickNameErrorFeedback">
+                    <input type="text" name="userNickName" id="userNickName" required="true" aria-invalid="false" aria-describedby="nickNameErrorFeedback"
+                    placeholder="예) 슬비 (명사로 이루어진 한글 6자리 이내)">
                     <span role="alert" id="nickNameErrorFeedback">닉네임은 명사로 이루어진 한글 6자리 이내여야 합니다.</span>
                </div>
                <!-- 선택적 개인정보 수집동의 및 이용약관 -->
@@ -273,6 +356,40 @@
            </fieldset>
        </form>
    </section>
+
+   <div class="footer-container">
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__brand-logo">
+        <img src="../images/footer_logo.svg" alt="cafe W Logo" />
+      </div>
+      <ul class="reset-list footer__site-info">
+        <li><a href="#">개인정보 처리방침</a></li>
+        <li><a href="#">멤버스 이용약관</a></li>
+        <li><a href="#">가맹 안내</a></li>
+        <li><a href="#">대량 쿠폰판매</a></li>
+        <li><a href="#">채용 안내</a></li>
+        <li><a href="#">고객의 소리</a></li>
+        <li><a href="#">사이트맵</a></li>
+      </ul>
+      <address class="footer__address">
+        <span>서울시 강남구 테헤란로 10길 18 K&amp;I 타워 카페 W (2F)</span>
+        <span class="address__divider" aria-hidden="true">ㅣ</span>
+        <span>연락처 : 02-6951-2121</span>
+        <div>
+          <span>사업자 등록번호 : 107-86-16302</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
+          <span>통신판매업 신고 : 강남 제 022519호</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
+          <span>대표이사 : 김데레사</span>
+        </div>
+      </address>
+      <small class="footer__copyright">&copy; 2020 cafe w company.all rights reserved.</small>
+    </footer>
+  </div>
+
+  <!-- 상단 이동 -->
+  <a href="#" class="gototop" aria-label="상단 이동"></a>
 </body>
 
 </html> 
