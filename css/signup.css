@@ -146,8 +146,8 @@
 }
 .member-form__gender input{
     position:relative;
-    width: 33px;
-    height: 33px;
+    width: 20px;
+    height: 20px;
     padding: 0;
 }   
 .member-form__gender input::before {
@@ -157,8 +157,8 @@
     top: 8px;
     left: 7px;
     background: no-repeat url('../images/radio-off.svg') 0 0;
-    width: 33px;
-    height: 33px;
+    width: 20px;
+    height: 20px;
     transform: scale(1.7);
 }
 .member-form__gender input:checked::before {
