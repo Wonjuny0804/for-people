@@ -1,0 +1,45 @@
+/* 포커스 시 아웃라인 커스텀 디자인 */
+:focus {
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgba(125, 111, 93, 1);
+}
+
+/* section_04 */
+.cafew-video-container{
+  width: 100%;
+  background: #282725;
+}
+
+.cafew-youtube{
+  position: relative;
+}
+
+.cafew-youtube figure{
+  padding: 25px 0;
+  text-align: center;
+}
+
+.cafew-youtube figure::before,
+.cafew-youtube figure::after{
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 122px;
+  background: url(../images/Star_Symbol_youtube.png) no-repeat center;
+  /* opacity: 0.3; */
+  position: absolute;
+  top: 248px;
+}
+
+.cafew-youtube figure::before{
+  left: 85px;
+}
+.cafew-youtube figure::after{
+  right: 85px;
+}
+
+.cafew-youtube iframe{
+  width: 960px;
+  height: 540px;
+}
