@@ -94,6 +94,7 @@ background: rgba( 0,0,0, 0.6);
 
 #### 배근아  
 1. 메인 페이지 section2, 3, 6, 7 HTML, section3 CSS      
+  
   **마크업 순서**  
   (1) 논리적인 흐름 구상  
   (2) 그림으로 HTML 초안 작성 및 tag 결정  
