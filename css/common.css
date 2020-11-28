@@ -344,7 +344,7 @@ body{
 }
 
 .main__notice-ticker.is--close {
-  display: none;
+  /* display: none; */
 }
 
 
