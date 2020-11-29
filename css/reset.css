@@ -58,6 +58,11 @@ button {
 button[disabled] {
   cursor: not-allowed;
 }
+.reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
 
 /* 링크 요소의 밑줄 및 글자 색상 재정의 */
 a {
