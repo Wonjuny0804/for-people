@@ -1,0 +1,112 @@
+/* section 07 */
+/* 섹션7 제목 부분 */
+.lab-container {
+  /* background-color: pink; */
+  padding: 80px 0; /* 120px */
+}
+.lab-headline, .lab-text {
+  text-align: center;
+}
+.lab-headline {
+  font-size: 4.6rem;
+  font-weight: 300;
+}
+.lab-headline em {
+  font-weight: 700;
+}
+.lab-text {
+  font-size: 1.8rem;
+  margin-top: 8px;
+  position: relative;
+}
+.lab-text em {
+  font-weight: 700;
+}
+.lab-text::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border-bottom: 1px solid var(--theme-main);
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 55px;
+}
+/* 섹션7 사진 부분 */
+.lab-container ul {
+  width: 1200px;
+  height: 825px;
+  margin: 70px auto;
+  position: relative;
+}
+
+/* .lab-menu a, .lab-barista a {
+  display: block;
+  width: 692px;
+  height: 692px;
+  color: var(--theme-light3);
+  font-size: 32px;
+  font-weight: 700;
+}
+.lab-menu a {
+  background: url(./images/lab_menu.png) no-repeat 0 0;
+}
+.lab-barista a {
+  background: url(./images/lab_barista.png) no-repeat 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
+
+.lab-menu, .lab-barista {
+  width: 692px;
+  height: 692px;
+}
+.lab-menu {
+  background: url(./images/lab_menu.png) no-repeat 0 0;
+  position: absolute;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+.lab-barista {
+  background: url(./images/lab_barista.png) no-repeat 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;  
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+.lab-menu:hover {
+  transform: none;
+}
+.lab-barista:hover {
+  z-index: 10;
+  transform: none;
+}
+.lab-menu a, .lab-barista a {
+  color: var(--theme-light3);
+  font-size: 32px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 20px 50px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lab-menu a::after, .lab-barista a::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  background: #FFFCF9;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+}
+.lab-menu a::after {
+  width: 180px;
+}
+.lab-barista a::after {
+  width: 220px;
+}
+

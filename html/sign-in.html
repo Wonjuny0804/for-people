@@ -3,46 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./sign-in.css">
   <title>CAFE W</title>
+  
+  <link rel="preload" as="style" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
+  <link rel="preload" as="style" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="preload" as="style" href="../css/style.css" />
+  
+  <!-- 스타일링 -->
+  <link rel="stylesheet" href="../css/style.css" />
+
 </head>
 <body>
-  <div class="skip-nav"><a href="#content">본문 바로가기</a></div>
+  <!-- skip-nav -->
+  <div class="skip-nav">
+    <a href="#Navigation">메뉴 바로가기</a>
+    <a href="#SignIn">로그인 바로가기</a>
+  </div>
+  <div class="header-container">
+    <!-- header -->
+    <header class="header">
+      <div class="header__top-menu flex-default">
+        <h1 class="header__headline">
+          <a href="../index.html">
+            <img src="../images/logo.svg" alt="Cafe W logo" />
+          </a>
+          <span class="a11y-hidden">CAFE W</span>
+        </h1>
+        <ul class="header__list">
+          <li>
+            <a href="./sign-in.html">Sign In</a>
+          </li>
+          <li>
+            <a href="./signup.html">Sign Up</a>
+          </li>
+        </ul>
+        <form action="#" method="get" class="header__search">
+          <h2 class="a11y-hidden">검색</h2>
+          <fieldset class="flex-default">
+            <legend class="a11y-hidden">검색폼</legend>
+            <label for="searchForm" class="a11y-hidden">자료검색</label>
+            <input type="text" id="searchForm" class="search__form" name="search" required />
+            <a href="#" class="search__btn" title="검색">
+              <img src="../images/Search.svg" alt="검색버튼" />
+            </a>
+          </fieldset>
+        </form>
+      </div>
+      <nav class="navigation" id="Navigation">
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="nav__menu flex-default">
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Drinks</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">콜드 브루</a></li>
+              <li><a href="#">에스프레소</a></li>
+              <li><a href="#">기타 제조 음료</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Foods</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">베이커리</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">샌드위치 & 샐러드</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Products</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">머그</a></li>
+              <li><a href="#">텀블러</a></li>
+              <li><a href="#">커피용품</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Lectures</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">UI 구조 & 디자인</a></li>
+              <li><a href="#">UI 인터렉션 주니어</a></li>
+              <li><a href="#">리액트 프로그래밍</a></li>
+            </ul>
+          </li>
+          <li class="nav__list">
+            <h3 class="nav__headline"><a href="#">Customer Service</a></h3>
+            <ul class="nav__items">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">추천 채널</a></li>
+              <li><a href="#">체크 리스트</a></li> 
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
   <!-- 로그인 메인 섹션 -->
   <main class="main-container" id="content">
+    <div class="bg">
     <!-- 로그인 입력 서식 영역 -->
-    <section class="sign-in">
+    <section class="sign-in" id="SignIn">
       <h2 class="sign-in__headline">sign in</h2>
       <p class="sign-in__intro">환영합니다. 이 곳은 CAFE W 입니다.</p>
       <form action="#" method="POST">
         <fieldset>
-          <legend>로그인 폼</legend>
+          <legend class="a11y-hidden">로그인 폼</legend>
           <div class="sign-in__form">
             <!-- 아이디 및 비밀번호 입력창 -->
-            <div class="member-id is--invaild">
+            <div class="member-id is-invalid is-invalid-input">
               <label for="userId">아이디</label>
-              <input type="email" id="userId" name="user_id" required>
-              <p class="placeholder">사용자 계정을 입력합니다.</p>
+              <input type="email" id="userId" name="user_id" placeholder="사용자 계정을 입력합니다." required />
               <span class="member-id--error" role="alert">* 아이디 입력 방식이 잘못되었습니다. (예: user@cafew.com)</span>
             </div>
-            <div class="member-pw is--invalid">
+            <div class="member-pw">
               <label for="userPw">패스워드</label>
-              <input type="password" id="userPw" name="user_pw" required>
-              <p class="placeholder">사용자 계정 비밀번호를 입력합니다.</p>
+              <input type="password" id="userPw" name="user_pw" placeholder="사용자 계정 비밀번호를 입력합니다." required />
               <span class="member-pw--error" role="alert">* 비밀번호는 특수문자 및 숫자 대,소문자 포함 8자리 이상입니다.</span>
             </div>
             <!-- 아이디 저장 및 로그인 유지 -->
             <div class="save-and-keep">
               <div class="save-id">
-                <input type="checkbox" id="userIdSave">
-                <span class="sign-in__checkbox"></span>
+                <input type="checkbox" id="userIdSave" />
+                <span class="sign-in__checkbox" aria-hidden="true"></span>
                 <label for="userIdSave">아이디 저장</label>
               </div>
-              <div class="keep-sign-in">
-                <input type="checkbox" id="keepSignIn">
+              <label for="keepSignIn" class="keep-sign-in">
+                <input type="checkbox" id="keepSignIn" />
                 <span class="sign-in__checkbox"></span>
+                로그인 상태 유지
+              </label>
+              <!-- <div class="keep-sign-in">
+                <input type="checkbox" id="keepSignIn" />
+                <span class="sign-in__checkbox" aria-hidden="true"></span>
                 <label for="keepSignIn">로그인 상태 유지</label>
-              </div>
+              </div> -->
             </div>
             <!-- 로그인 인포메이션 -->
             <div class="sign-in__info">
@@ -50,7 +142,7 @@
               <p>Cafe W 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari, Edge 브라우저에 최적화 되어있습니다.</p>
             </div>
             <!-- 로그인 버튼 -->
-            <div class="sign-in__request is--invalid">
+            <div class="sign-in__request is-invalid">
               <button class="btn-sign-in" type="submit">로그인</button>
               <span class="sign-in--error" role="alert">아이디 또는 비밀번호가 일치하지 않습니다. 다시 입력해주세요.</span>
             </div>
@@ -66,44 +158,40 @@
         </fieldset>
       </form>
     </section>
+  </div>
   </main>
-  <!-- 공통 푸터 -->
-  <footer class="footer">
-    <!-- 브랜드 로고 -->
-    <div class="footer__brand-logo">
-      <svg>
-        <title>cafe W Logo</title>
-      </svg>
-    </div>
-    <!-- 사이트 내 정보 -->
-    <ul class="site-info reset-list">
-      <li><a href="#">개인정보 처리방침</a></li>
-      <li><a href="#">멤버스 이용약관</a></li>
-      <li><a href="#">가맹 안내</a></li>
-      <li><a href="#">대량 쿠폰판매</a></li>
-      <li><a href="#">채용 안내</a></li>
-      <li><a href="#">고객의 소리</a></li>
-      <li><a href="#">사이트맵</a></li>
-    </ul>
-    <!-- 카페 더블유 주소 등 정보 -->
-    <address class="address">
-      <span>서울시 강남구 테헤란로 10길 18 K&amp;I 타워 카페 W (2F)</span>
-      <span class="divider" aria-hidden="true">ㅣ</span>
-      <span>연락처 : 02-6951-2121</span>
-      <span>사업자 등록번호 : 107-86-16302</span>
-      <span class="divider" aria-hidden="true">ㅣ</span>
-      <span>통신판매업 신고 : 강남 제 022519호</span>
-      <span class="divider" aria-hidden="true">ㅣ</span>
-      <span>대표이사 : 김데레사</span>
-    </address>
-    <small class="copyright">&copy; 2020 cafe w company.all rights reserved.</small>
-  </footer>
+  <div class="footer-container">
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__brand-logo">
+        <img src="../images/footer_logo.svg" alt="cafe W Logo" />
+      </div>
+      <ul class="reset-list footer__site-info">
+        <li><a href="#">개인정보 처리방침</a></li>
+        <li><a href="#">멤버스 이용약관</a></li>
+        <li><a href="#">가맹 안내</a></li>
+        <li><a href="#">대량 쿠폰판매</a></li>
+        <li><a href="#">채용 안내</a></li>
+        <li><a href="#">고객의 소리</a></li>
+        <li><a href="#">사이트맵</a></li>
+      </ul>
+      <address class="footer__address">
+        <span>서울시 강남구 테헤란로 10길 18 K&amp;I 타워 카페 W (2F)</span>
+        <span class="address__divider" aria-hidden="true">ㅣ</span>
+        <span>연락처 : 02-6951-2121</span>
+        <div>
+          <span>사업자 등록번호 : 107-86-16302</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
+          <span>통신판매업 신고 : 강남 제 022519호</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
+          <span>대표이사 : 김데레사</span>
+        </div>
+      </address>
+      <small class="footer__copyright">&copy; 2020 cafe w company.all rights reserved.</small>
+    </footer>
+  </div>
+
   <!-- 상단 이동 -->
-  <a href="#" class="gototop">gototop
-    <svg>
-      <title>페이지 상단 이동</title>
-    </svg>
-  </a>
-  <!-- 화살표 이미지 svg로 삽입할 경우에는 '페이지 상단 이동'을 svg 태그 내 title요소에 작성 -->
+  <a href="#" class="gototop" aria-label="상단 이동"></a>
 </body>
 </html>
